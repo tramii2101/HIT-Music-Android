@@ -1,17 +1,13 @@
-package com.example.hitmusicapp.ui.authentication.forgot_methods
+package com.example.hitmusicapp.screen.authentication.forgot_methods
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
-import androidx.fragment.app.FragmentManager
 import com.example.hitmusicapp.base.BaseFragment
 import com.example.hitmusicapp.databinding.FragmentForgotPasswordMethodsBinding
 
 class ForgotPasswordMethodsFragment : BaseFragment<FragmentForgotPasswordMethodsBinding>() {
-
     override fun initListener() {
-        binding.tvEmailMethod.setOnClickListener {
 
-        }
     }
 
     override fun initView() {

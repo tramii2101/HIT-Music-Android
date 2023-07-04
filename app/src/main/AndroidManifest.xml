@@ -12,13 +12,16 @@
         android:theme="@style/Theme.HITMusicApp"
         tools:targetApi="31">
         <activity
-            android:name=".ui.authentication.AuthenticationActivity"
+            android:name=".screen.authentication.login.LoginActivity"
+            android:exported="false" />
+        <activity
+            android:name=".SplashActivity"
+            android:exported="false" />
+        <activity
+            android:name=".screen.authentication.AuthenticationActivity"
             android:exported="false"
             android:label="@string/title_activity_authentication"
             android:theme="@style/Theme.HITMusicApp.NoActionBar" />
-
-        <activity android:name=".ui.Splash.SplashActivity"
-            android:exported="true"/>
         <activity
             android:name=".MainActivity"
             android:exported="true"
@@ -30,7 +33,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
     </application>
 
 </manifest>

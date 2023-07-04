@@ -1,4 +1,4 @@
-package com.example.hitmusicapp.ui.Splash
+package com.example.hitmusicapp.screen.Splash
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity

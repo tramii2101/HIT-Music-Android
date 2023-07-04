@@ -1,4 +1,4 @@
-package com.example.hitmusicapp.ui.authentication.create_new_password
+package com.example.hitmusicapp.screen.authentication.create_new_password
 
 import androidx.lifecycle.ViewModel
 

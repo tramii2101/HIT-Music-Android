@@ -7,10 +7,23 @@
     <string name="first_fragment_label">First Fragment</string>
     <string name="second_fragment_label">Second Fragment</string>
 
-    <string name="select_method">OTP will be sent to this email to reset your password</string>
+    <string name="select_method">Select which contact detail should we use to reset your password</string>
     <string name="send_code">Code has been send to </string>
     <string name="create_new_password">Create your new password</string>
     <string name="title_activity_authentication">AuthenticationActivity</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
 
-    <string name="welcome">Welcome</string>
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+    <string name="create_your_account">Create Your Account</string>
+    <string name="login_your_account">Login Your Account</string>
+    <string name="already_have_an_account_sign_in">Already have an account? Sign in</string>
+    <string name="do_not_have_an_account_sign_up">Do not have an account? Sign up</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="remember_me">Remember me</string>
+    <string name="sign_in">Sign in</string>
+    <string name="sign_up">Sign up</string>
+    <string name="forgot_the_password">Forgot the password?</string>
 </resources>

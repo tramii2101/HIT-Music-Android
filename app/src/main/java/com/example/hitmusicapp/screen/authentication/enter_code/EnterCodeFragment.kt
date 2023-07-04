@@ -1,4 +1,4 @@
-package com.example.hitmusicapp.ui.authentication.enter_code
+package com.example.hitmusicapp.screen.authentication.enter_code
 
 import android.view.LayoutInflater
 import android.view.ViewGroup

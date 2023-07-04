@@ -1,4 +1,4 @@
-package com.example.hitmusicapp.ui.authentication.forgot_methods
+package com.example.hitmusicapp.screen.authentication.forgot_methods
 
 import androidx.lifecycle.ViewModel
 

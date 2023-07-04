@@ -1,20 +1,14 @@
-package com.example.hitmusicapp.ui.authentication.create_new_password
+package com.example.hitmusicapp.screen.authentication.create_new_password
 
-import android.app.AlertDialog
 import android.app.Dialog
-import androidx.lifecycle.ViewModelProvider
-import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
-import android.view.View
 import android.view.ViewGroup
-import androidx.fragment.app.DialogFragment
-import com.example.hitmusicapp.R
+import androidx.lifecycle.ViewModelProvider
 import com.example.hitmusicapp.base.BaseFragment
 import com.example.hitmusicapp.databinding.FragmentCreateNewPasswordBinding
 
 class CreateNewPasswordFragment : BaseFragment<FragmentCreateNewPasswordBinding>() {
-    val viewModel:CreateNewPasswordViewModel
+    val viewModel: CreateNewPasswordViewModel
         get() = ViewModelProvider(this).get(CreateNewPasswordViewModel::class.java)
 
     private val dialog by lazy { context?.let { Dialog(it) } }
