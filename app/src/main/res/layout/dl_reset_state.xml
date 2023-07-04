@@ -18,18 +18,26 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_width="292dp"
+            android:layout_height="397dp"
             android:layout_gravity="center"
             android:gravity="center"
             android:orientation="vertical"
             android:paddingHorizontal="16dp"
             android:paddingVertical="12dp">
 
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:src="@drawable/success" />
+            <!--            <ImageView-->
+            <!--                android:layout_width="wrap_content"-->
+            <!--                android:layout_height="wrap_content"-->
+            <!--                android:src="@drawable/success" />-->
+
+            <com.airbnb.lottie.LottieAnimationView
+                android:id="@+id/animation_view"
+                android:layout_width="272dp"
+                android:layout_height="252dp"
+                app:lottie_autoPlay="true"
+                app:lottie_fileName="success.json"
+                app:lottie_loop="true" />
 
             <TextView
                 android:layout_width="wrap_content"
