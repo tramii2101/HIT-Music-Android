@@ -30,6 +30,8 @@ abstract class BaseActivity<VB : ViewBinding> : AppCompatActivity() {
         innitData()
         handleEvent()
         bindData()
+
+
     }
 
     abstract fun initListener()
