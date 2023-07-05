@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".ui.authentication.enter_code.EnterCodeFragment">
+    tools:context=".screen.authentication.enter_code.EnterCodeFragment">
 
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar"
@@ -24,7 +24,8 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
-        android:layout_weight="1">
+        android:layout_weight="1"
+        android:padding="16dp">
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -36,21 +37,21 @@
 
         <com.mukeshsolanki.OtpView
             android:id="@+id/otp_view"
-            android:layout_width="382dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginVertical="60dp"
-            android:gravity="center"
+            android:gravity="center_horizontal"
             android:inputType="numberPassword"
             android:itemBackground="@drawable/otp_item"
             android:text=""
             android:textAllCaps="true"
             android:textColor="@color/black"
             app:OtpHideLineWhenFilled="false"
-            app:OtpItemCount="4"
-            app:OtpItemHeight="58dp"
-            app:OtpItemSpacing="20dp"
-            app:OtpItemWidth="80dp"
+            app:OtpItemCount="6"
+            app:OtpItemHeight="50dp"
+            app:OtpItemSpacing="12dp"
+
             app:OtpState_filled="true"
             app:OtpViewType="none" />
 
@@ -87,9 +88,14 @@
 
     </LinearLayout>
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="3"
+        android:padding="16dp">
         <TextView
             android:id="@+id/tv_verify_otp"
-            android:layout_width="380dp"
+            android:layout_width="match_parent"
             android:layout_height="58dp"
             android:layout_gravity="center"
             android:layout_marginVertical="36dp"
@@ -99,5 +105,6 @@
             android:textColor="@color/white"
             android:textSize="20sp"
             android:textStyle="bold" />
+    </LinearLayout>
 
 </LinearLayout>

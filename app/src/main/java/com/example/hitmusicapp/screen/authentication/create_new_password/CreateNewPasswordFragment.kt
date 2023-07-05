@@ -1,15 +1,9 @@
-package com.example.hitmusicapp.ui.authentication.create_new_password
+package com.example.hitmusicapp.screen.authentication.create_new_password
 
-import android.app.AlertDialog
 import android.app.Dialog
 import androidx.lifecycle.ViewModelProvider
-import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
-import android.view.View
 import android.view.ViewGroup
-import androidx.fragment.app.DialogFragment
-import com.example.hitmusicapp.R
 import com.example.hitmusicapp.base.BaseFragment
 import com.example.hitmusicapp.databinding.FragmentCreateNewPasswordBinding
 
