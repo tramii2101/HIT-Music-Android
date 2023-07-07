@@ -13,13 +13,19 @@ import com.example.hitmusicapp.databinding.FragmentSignUpBinding
 class SignUpFragment : BaseFragment<FragmentSignUpBinding>() {
     override fun initListener() {
         binding.backLogin.setOnClickListener {
-            requireActivity().supportFragmentManager.popBackStack("authentication", FragmentManager.POP_BACK_STACK_INCLUSIVE)
+            requireActivity().supportFragmentManager.popBackStack(
+                "authentication",
+                FragmentManager.POP_BACK_STACK_INCLUSIVE
+            )
         }
 
         binding.tvSignIn.setOnClickListener {
-            requireActivity().supportFragmentManager.beginTransaction().replace(R.id.frame_authen, SignUpFragment()).addToBackStack("authentication")
-                .commit()
+            requireActivity().supportFragmentManager.popBackStack(
+                "authentication",
+                FragmentManager.POP_BACK_STACK_INCLUSIVE
+            )
         }
+
 
         var isHidden = true
         binding.icPassword.setOnClickListener {
@@ -58,7 +64,7 @@ class SignUpFragment : BaseFragment<FragmentSignUpBinding>() {
         inflater: LayoutInflater,
         container: ViewGroup?
     ): FragmentSignUpBinding {
-        return  FragmentSignUpBinding.inflate(inflater, container, false)
+        return FragmentSignUpBinding.inflate(inflater, container, false)
     }
 
 }
