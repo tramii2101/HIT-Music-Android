@@ -20,9 +20,6 @@ class LoginActivity :  BaseActivity<ActivityLoginBinding>(){
 
     }
 
-    override fun innitData() {
-
-    }
 
     override fun handleEvent() {
 

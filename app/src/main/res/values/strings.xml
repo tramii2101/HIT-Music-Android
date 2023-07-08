@@ -29,5 +29,11 @@
     <string name="forgot_the_password">Forgot the password?</string>
     <string name="redirect">You will be redirect in few seconds...</string>
     <string name="reset_successful">Reset successful</string>
+    <string name="greeting">Have a nice day!</string>
+    <string name="see_all">See all</string>
+    <string name="trending_now">Trending now</string>
+    <string name="fill_your_profile">Fill your profile</string>
+    <string name="full_name">Full name</string>
+    <string name="popular_artists">Popular Artists</string>
 
 </resources>

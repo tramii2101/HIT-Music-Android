@@ -84,8 +84,7 @@
             android:password="true"
             android:hint="@string/password"
             android:textColorHint="@color/grey"
-            android:layout_weight="1"
-            />
+            android:layout_weight="1" />
 
         <ImageView
             android:id="@+id/ic_password"
