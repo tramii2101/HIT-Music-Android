@@ -56,7 +56,7 @@ abstract class BaseAdapterRecyclerView<T, VB : ViewBinding>
         bindData(holder.binding, dataList[position], position)
     }
 
-    abstract fun bindData(binding: ViewBinding, item: T, position: Int)
+    abstract fun bindData(binding: VB, item: T, position: Int)
 
     open fun setData(@IntRange(from = 0) index: Int, data: T) {
         if (index >= this.dataList.size) {
@@ -93,5 +93,5 @@ abstract class BaseAdapterRecyclerView<T, VB : ViewBinding>
         return dataList.size
     }
 
-    abstract fun inflateViewBinding(inflate: LayoutInflater?, parent: ViewGroup): VB
+    abstract fun inflateViewBinding(inflate: LayoutInflater, parent: ViewGroup): VB
 }
