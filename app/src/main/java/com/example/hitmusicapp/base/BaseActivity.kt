@@ -26,8 +26,6 @@ abstract class BaseActivity<VB : ViewBinding> : AppCompatActivity() {
         initView()
         initData()
         initListener()
-
-        innitData()
         handleEvent()
         bindData()
     }
@@ -38,12 +36,12 @@ abstract class BaseActivity<VB : ViewBinding> : AppCompatActivity() {
 
     abstract fun initView()
 
-
     abstract fun innitData()
 
     abstract fun handleEvent()
 
     abstract fun bindData()
+    
     abstract fun inflateViewBinding(layoutInflater: LayoutInflater): VB
 
 }
