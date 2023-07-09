@@ -16,5 +16,4 @@
     <style name="BottomSheet" parent="Widget.Design.BottomSheet.Modal">
         <item name="android:background">@drawable/bg_round_white_top_bottom</item>
     </style>
-
 </resources>
