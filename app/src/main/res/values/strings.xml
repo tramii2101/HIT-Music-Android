@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">HIT Music App</string>
+    <string name="app_name">HIT Music</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="title_activity_main">MainActivity</string>
@@ -29,5 +29,6 @@
     <string name="forgot_the_password">Forgot the password?</string>
     <string name="redirect">You will be redirect in few seconds...</string>
     <string name="reset_successful">Reset successful</string>
+    <string name="confirm_password">Confirm password</string>
 
 </resources>

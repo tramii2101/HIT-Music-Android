@@ -42,6 +42,22 @@ class SignUpFragment : BaseFragment<FragmentSignUpBinding>() {
                     HideReturnsTransformationMethod.getInstance()
             }
         }
+
+        var isHiddenPassword = true
+        binding.icPasswordVisibility.setOnClickListener {
+            isHiddenPassword = !isHiddenPassword
+            if (isHiddenPassword) {
+                //hide password
+                binding.icPasswordVisibility.setImageResource(R.drawable.hide_pass)
+                binding.edtConfirmPassword.transformationMethod =
+                    PasswordTransformationMethod.getInstance()
+            } else {
+                //show password
+                binding.icPasswordVisibility.setImageResource(R.drawable.show_password)
+                binding.edtConfirmPassword.transformationMethod =
+                    HideReturnsTransformationMethod.getInstance()
+            }
+        }
     }
 
     override fun initView() {

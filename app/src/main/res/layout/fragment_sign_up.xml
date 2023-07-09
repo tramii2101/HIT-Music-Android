@@ -36,56 +36,58 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="50dp"
-        android:orientation="horizontal"
+        android:layout_marginVertical="12dp"
         android:background="@drawable/otp_unselected"
-        android:layout_marginVertical="12dp">
+        android:orientation="horizontal">
+
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/mail"
             android:layout_gravity="center"
-            android:layout_marginHorizontal="12dp"/>
+            android:layout_marginHorizontal="12dp"
+            android:src="@drawable/mail" />
 
         <EditText
             android:id="@+id/edt_email_login"
-            android:layout_width="match_parent"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:password="true"
-            android:hint="@string/email"
-            android:textColorHint="@color/grey"
             android:layout_weight="1"
-            />
+            android:hint="@string/email"
+            android:password="true"
+            android:textColorHint="@color/grey" />
+
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:layout_marginHorizontal="12dp"/>
+            android:layout_marginHorizontal="16dp"
+            android:padding="2dp" />
     </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="50dp"
-        android:orientation="horizontal"
+        android:layout_marginVertical="12dp"
         android:background="@drawable/otp_unselected"
-        android:layout_marginVertical="12dp">
+        android:orientation="horizontal">
+
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/password"
             android:layout_gravity="center"
-            android:layout_marginHorizontal="12dp"/>
+            android:layout_marginHorizontal="12dp"
+            android:src="@drawable/password" />
 
         <EditText
             android:id="@+id/edt_password_signup"
-            android:layout_width="match_parent"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:password="true"
-            android:hint="@string/password"
-            android:textColorHint="@color/grey"
             android:layout_weight="1"
-            />
+            android:hint="@string/password"
+            android:password="true"
+            android:textColorHint="@color/grey" />
 
         <ImageView
             android:id="@+id/ic_password"
@@ -98,16 +100,49 @@
 
     <LinearLayout
         android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginVertical="12dp"
+        android:background="@drawable/otp_unselected"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginHorizontal="12dp"
+            android:src="@drawable/password" />
+
+        <EditText
+            android:id="@+id/edt_confirm_password"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:hint="@string/confirm_password"
+            android:password="true"
+            android:textColorHint="@color/grey" />
+
+        <ImageView
+            android:id="@+id/ic_password_visibility"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginEnd="12dp"
+            android:src="@drawable/hide_pass" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="24sp"
         android:gravity="center">
 
         <CheckBox
             android:id="@+id/checkbox_remember_new_acc"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:checked="true"
-            android:buttonTint="@color/green_b"/>
+            android:buttonTint="@color/green_b"
+            android:checked="true" />
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -131,7 +166,6 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_weight="1"
         android:gravity="center"
         android:orientation="horizontal">
 
@@ -141,18 +175,18 @@
             android:layout_gravity="center"
             android:gravity="center"
             android:text="@string/already_have_an_account_sign_in"
-            android:textSize="16dp" />
+            android:textSize="16sp" />
 
         <TextView
             android:id="@+id/tv_sign_in"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:gravity="center"
             android:layout_gravity="center"
-            android:text="Sign in"
-            android:textSize="16dp"
+            android:gravity="center"
+            android:padding="8dp"
+            android:text="@string/sign_in"
             android:textColor="@color/green_b"
-            android:padding="8dp"/>
+            android:textSize="16sp" />
     </LinearLayout>
 
 </LinearLayout>
