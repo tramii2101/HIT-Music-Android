@@ -9,6 +9,7 @@ import com.example.hitmusicapp.entities.Song
 
 class PopularSongAdapter : BaseAdapterRecyclerView<Song, ItemSongInHomeBinding>() {
     override fun bindData(binding: ItemSongInHomeBinding, item: Song, position: Int) {
+        binding.tvSong.text = item.tittle
         Glide.with(binding.root.context).load(item.image).into(binding.imgBackground)
     }
 

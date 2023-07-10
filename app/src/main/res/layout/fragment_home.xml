@@ -109,6 +109,7 @@
             android:layout_height="match_parent"
             android:orientation="horizontal"
             android:padding="12dp"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
             tools:itemCount="10"
             tools:listitem="@layout/item_song_in_home">
 
@@ -145,6 +146,7 @@
             android:layout_height="match_parent"
             android:orientation="horizontal"
             android:padding="12dp"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
             tools:listitem="@layout/item_singer">
 
         </androidx.recyclerview.widget.RecyclerView>
