@@ -1,6 +1,5 @@
 package com.example.hitmusicapp.screen.authentication.login
 
-import android.os.Bundle
 import android.view.LayoutInflater
 import com.example.hitmusicapp.R
 import com.example.hitmusicapp.base.BaseActivity
@@ -17,10 +16,6 @@ class LoginActivity :  BaseActivity<ActivityLoginBinding>(){
     }
 
     override fun initData() {
-
-    }
-
-    override fun innitData() {
 
     }
 

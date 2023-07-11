@@ -49,7 +49,7 @@
 
         <EditText
             android:id="@+id/edt_email_login"
-            android:layout_width="0dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_weight="1"
@@ -61,8 +61,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:layout_marginHorizontal="16dp"
-            android:padding="2dp" />
+            android:layout_marginHorizontal="12dp" />
     </LinearLayout>
 
     <LinearLayout
@@ -81,7 +80,7 @@
 
         <EditText
             android:id="@+id/edt_password_signup"
-            android:layout_width="0dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_weight="1"
@@ -100,40 +99,8 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:layout_marginVertical="12dp"
-        android:background="@drawable/otp_unselected"
-        android:orientation="horizontal">
-
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginHorizontal="12dp"
-            android:src="@drawable/password" />
-
-        <EditText
-            android:id="@+id/edt_confirm_password"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_weight="1"
-            android:hint="@string/confirm_password"
-            android:password="true"
-            android:textColorHint="@color/grey" />
-
-        <ImageView
-            android:id="@+id/ic_password_visibility"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginEnd="12dp"
-            android:src="@drawable/hide_pass" />
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
         android:gravity="center">
 
         <CheckBox
@@ -142,7 +109,6 @@
             android:layout_height="wrap_content"
             android:buttonTint="@color/green_b"
             android:checked="true" />
-
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -166,6 +132,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:layout_weight="1"
         android:gravity="center"
         android:orientation="horizontal">
 
