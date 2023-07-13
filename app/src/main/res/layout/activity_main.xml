@@ -21,7 +21,6 @@
         android:layout_alignParentBottom="true"
         android:background="@drawable/bg_btn_nav"
         app:itemIconSize="25dp"
-
         app:itemIconTint="@color/color_btn_nav"
         app:itemTextColor="@color/color_btn_nav"
         app:labelVisibilityMode="labeled"
