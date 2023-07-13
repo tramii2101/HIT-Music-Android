@@ -15,7 +15,6 @@
     <color name="grey_c">#535353</color>
     <color name="grey_b">#737272</color>
     <color name="light_grey">#F6F6F6</color>
-
-
+    <color name="red">#FF0000</color>
 
 </resources>

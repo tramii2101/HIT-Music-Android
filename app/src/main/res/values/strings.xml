@@ -36,5 +36,7 @@
     <string name="full_name">Full name</string>
     <string name="popular_artists">Popular Artists</string>
     <string name="confirm_password">Confirm password</string>
+    <string name="explore">Explore</string>
+    <string name="browse_all">Browse all</string>
 
 </resources>
