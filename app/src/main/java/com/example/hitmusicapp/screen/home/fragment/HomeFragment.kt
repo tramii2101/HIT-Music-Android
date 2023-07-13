@@ -3,8 +3,8 @@ package com.example.hitmusicapp.screen.home.fragment
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.example.hitmusicapp.adapter.PopularSongAdapter
-import com.example.hitmusicapp.adapter.SingerAdapter
+import com.example.hitmusicapp.adapters.PopularSongAdapter
+import com.example.hitmusicapp.adapters.SingerAdapter
 import com.example.hitmusicapp.base.BaseFragment
 import com.example.hitmusicapp.databinding.FragmentHomeBinding
 import com.example.hitmusicapp.utils.extension.setLinearLayoutManager
