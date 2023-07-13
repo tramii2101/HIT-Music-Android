@@ -26,6 +26,12 @@ class SignUpFragment : BaseFragment<FragmentSignUpBinding>() {
             )
         }
 
+        binding.signUp.setOnClickListener {
+            requireActivity().supportFragmentManager.beginTransaction()
+                .replace(R.id.frame_authen, YourProfileFragment()).addToBackStack("authentication")
+                .commit()
+        }
+
 
         var isHidden = true
         binding.icPassword.setOnClickListener {
