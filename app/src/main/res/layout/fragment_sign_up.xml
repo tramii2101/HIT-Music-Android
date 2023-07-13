@@ -119,6 +119,7 @@
     </LinearLayout>
 
     <TextView
+        android:id="@+id/signUp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="24sp"
@@ -145,7 +146,7 @@
             android:textSize="16sp" />
 
         <TextView
-            android:id="@+id/tv_sign_in"
+            android:id="@+id/tvSignIn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
