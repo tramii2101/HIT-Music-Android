@@ -50,5 +50,6 @@
     <string name="songs">Songs</string>
     <string name="playlists">Playlists</string>
     <string name="favourite_songs">Favourite songs</string>
+    <string name="popular_songs">Popular Songs</string>
 
 </resources>
