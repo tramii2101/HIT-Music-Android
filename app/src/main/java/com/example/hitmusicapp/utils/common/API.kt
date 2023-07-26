@@ -1,7 +1,7 @@
 package com.example.hitmusicapp.utils.common
 
 object API {
-    const val BASE = "https://hit-music.onrender.com/"
+    const val BASE = "https://hit-music.onrender.com"
 
     // Auth API
     const val REGISTER = "/api/auth/register"
