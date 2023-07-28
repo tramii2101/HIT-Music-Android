@@ -4,10 +4,11 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
 import androidx.lifecycle.Lifecycle
 import androidx.viewpager2.adapter.FragmentStateAdapter
-import com.example.hitmusicapp.screen.home.fragment.ExploreFragment
-import com.example.hitmusicapp.screen.home.fragment.HomeFragment
-import com.example.hitmusicapp.screen.home.fragment.LibraryFragment
-import com.example.hitmusicapp.screen.home.fragment.ProfileFragment
+import com.example.hitmusicapp.user.explore.ExploreFragment
+import com.example.hitmusicapp.user.home.HomeFragment
+import com.example.hitmusicapp.user.library.LibraryFragment
+import com.example.hitmusicapp.user.profile.ProfileFragment
+
 
 class ViewPagerAdapter(fragmentManager: FragmentManager, lifecycle: Lifecycle) :
     FragmentStateAdapter(fragmentManager, lifecycle) {

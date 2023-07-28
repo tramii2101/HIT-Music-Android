@@ -1,12 +1,12 @@
-package com.example.hitmusicapp.screen.home.fragment
+package com.example.hitmusicapp.user.profile
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import com.example.hitmusicapp.base.BaseFragment
-import com.example.hitmusicapp.databinding.FragmentHomeBinding
+import com.example.hitmusicapp.databinding.FragmentLanguageBinding
 
 
-class HomeFragment : BaseFragment<FragmentHomeBinding>() {
+class LanguageFragment : BaseFragment<FragmentLanguageBinding>() {
     override fun initListener() {
 
     }
@@ -30,7 +30,7 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>() {
     override fun inflateLayout(
         inflater: LayoutInflater,
         container: ViewGroup?
-    ): FragmentHomeBinding {
-        return FragmentHomeBinding.inflate(inflater, container, false)
+    ): FragmentLanguageBinding {
+        return FragmentLanguageBinding.inflate(inflater, container, false)
     }
 }

@@ -2,6 +2,8 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    style="@style/SCREEN"
+    android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:paddingTop="30dp"
@@ -16,14 +18,11 @@
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/btn_nav"
+        style="@style/BTN"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:background="@drawable/bg_btn_nav"
         app:itemIconSize="25dp"
-
-        app:itemIconTint="@color/color_btn_nav"
-        app:itemTextColor="@color/color_btn_nav"
         app:labelVisibilityMode="labeled"
         app:menu="@menu/menu_btn_nav" />
 

@@ -1,4 +1,4 @@
-package com.example.hitmusicapp.screen.home.fragment
+package com.example.hitmusicapp.user.explore
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
@@ -24,7 +24,6 @@ class ExploreFragment : BaseFragment<FragmentExploreBinding>() {
     }
 
     override fun bindData() {
-
     }
 
     override fun inflateLayout(

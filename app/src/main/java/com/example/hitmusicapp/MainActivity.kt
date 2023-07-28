@@ -19,19 +19,15 @@ class MainActivity : BaseActivity<ActivityMainBinding>() {
                 when (binding.viewPager2.currentItem) {
                     0 -> {
                         binding.btnNav.menu.findItem(R.id.action_home).isChecked = true
-                        toast("Home")
                     }
                     1 -> {
                         binding.btnNav.menu.findItem(R.id.action_explore).isChecked = true
-                        toast("Explore")
                     }
                     2 -> {
                         binding.btnNav.menu.findItem(R.id.action_library).isChecked = true
-                        toast("Library")
                     }
                     3 -> {
                         binding.btnNav.menu.findItem(R.id.action_profile).isChecked = true
-                        toast("Profile")
                     }
                 }
             }
@@ -41,22 +37,18 @@ class MainActivity : BaseActivity<ActivityMainBinding>() {
             when (item.itemId) {
                 R.id.action_home -> {
                     binding.viewPager2.currentItem = 0
-                    toast("Home")
                     true
                 }
                 R.id.action_explore -> {
                     binding.viewPager2.currentItem = 1
-                    toast("Explore")
                     true
                 }
                 R.id.action_library -> {
                     binding.viewPager2.currentItem = 2
-                    toast("Library")
                     true
                 }
                 R.id.action_profile -> {
                     binding.viewPager2.currentItem = 3
-                    toast("Profile")
                     true
                 }
                 else -> false

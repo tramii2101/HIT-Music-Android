@@ -41,5 +41,19 @@
     <string name="explore"> Explore</string>
     <string name="library"> Library</string>
     <string name="profile"> Profile</string>
+    <string name="notification"> Notification</string>
+    <string name="audio_video"> Audio &amp; Video</string>
+    <string name="playback"> Playback</string>
+    <string name="data_saver"> Data Saver &amp; Storage</string>
+    <string name="security"> Security</string>
+    <string name="language"> Language</string>
+    <string name="vietnam"> Viet Nam</string>
+    <string name="english"> English</string>
+    <string name="dark_mode"> Dark Mode</string>
+    <string name="log_out">Logout</string>
+    <string name="are_you">Are you sure you want to log out?</string>
+    <string name="cancel">Cancel</string>
+    <string name="yes_log_out">Yes,Logout</string>
+
 
 </resources>
