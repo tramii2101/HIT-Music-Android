@@ -225,7 +225,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:background="@drawable/is_playing"
-                android:button="null"
+                android:button="@null"
                 android:checked="true"
                 android:padding="10dp" />
         </LinearLayout>

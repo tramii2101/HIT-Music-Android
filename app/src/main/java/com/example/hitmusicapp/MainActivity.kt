@@ -73,10 +73,6 @@ class MainActivity : BaseActivity<ActivityMainBinding>() {
 
     }
 
-    override fun innitData() {
-
-    }
-
     override fun handleEvent() {
 
     }
