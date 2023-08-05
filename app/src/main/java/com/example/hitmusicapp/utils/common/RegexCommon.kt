@@ -1,6 +1,6 @@
 package com.example.hitmusicapp.utils.common
 
-object Regex {
+object RegexCommon {
 
     val USERNAME = "^[a-zA-Z0-9]{6,20}\$".toRegex()
     val EMAIL = "^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,}\$".toRegex()
