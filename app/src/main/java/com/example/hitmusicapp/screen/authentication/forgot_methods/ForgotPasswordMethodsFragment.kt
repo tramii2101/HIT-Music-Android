@@ -1,6 +1,7 @@
 package com.example.hitmusicapp.screen.authentication.forgot_methods
 
 import android.content.Context.MODE_PRIVATE
+import android.content.SharedPreferences
 import android.util.Log
 import android.view.LayoutInflater
 import android.view.ViewGroup
@@ -16,23 +17,23 @@ import com.example.hitmusicapp.utils.common.RegexCommon
 
 class ForgotPasswordMethodsFragment : BaseFragment<FragmentForgotPasswordMethodsBinding>() {
 
-    val viewModel: ForgotPasswordMethodsViewModel
-        get() = ViewModelProvider(this)[ForgotPasswordMethodsViewModel::class.java]
-
-    val sharedPreferences by lazy {
-        requireActivity().getSharedPreferences("AUTHENTICATION", MODE_PRIVATE)
+    private val viewModel by lazy {
+        activity?.let { ViewModelProvider(it) }?.get(ForgotPasswordMethodsViewModel::class.java)
     }
 
+    private val sharedPreferences: SharedPreferences by lazy {
+        requireActivity().getSharedPreferences("AUTHENTICATION", MODE_PRIVATE)
+    }
 
     override fun initListener() {
         binding.tvSend.setOnClickListener {
             val verifyEmail = binding.edtEmail.text.toString().trim()
             if (RegexCommon.EMAIL.matches(verifyEmail)) {
-                viewModel.email = verifyEmail
-                viewModel.getTokenVerifyOTP(verifyEmail)
+                viewModel?.email  = verifyEmail
+                viewModel?.getData()
 
-                viewModel.token.observe(this, Observer {
-                    if (it != null) {
+                viewModel?.token?.observe(this, Observer {
+                    if (!it.isNullOrEmpty()) {
                         sharedPreferences.edit().putString("tokenVerifyOTP", it.toString()).apply()
                         sharedPreferences.edit().putString("verifyEmail", verifyEmail).apply()
                         requireActivity().supportFragmentManager.beginTransaction()
@@ -41,11 +42,10 @@ class ForgotPasswordMethodsFragment : BaseFragment<FragmentForgotPasswordMethods
                             .commit()
 
                     } else {
-                        Toast.makeText(context, viewModel.message.value, Toast.LENGTH_SHORT).show()
+                        Toast.makeText(context, viewModel!!.message.value, Toast.LENGTH_SHORT).show()
                     }
+                    Log.e("data response", viewModel?.token?.value.toString())
                 })
-                Log.e("data response", viewModel.token.value.toString())
-
 
             } else {
                 Toast.makeText(context, "Invalid email", Toast.LENGTH_SHORT).show()
@@ -59,7 +59,6 @@ class ForgotPasswordMethodsFragment : BaseFragment<FragmentForgotPasswordMethods
                 FragmentManager.POP_BACK_STACK_INCLUSIVE
             )
         }
-
 
     }
 
