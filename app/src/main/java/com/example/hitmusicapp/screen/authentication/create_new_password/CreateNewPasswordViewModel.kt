@@ -2,15 +2,17 @@ package com.example.hitmusicapp.screen.authentication.create_new_password
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
-import androidx.lifecycle.ViewModel
 import com.example.hitmusicapp.api.ApiHelper
 import com.example.hitmusicapp.api.ApiResponse
-import com.example.hitmusicapp.api.ApiService
+import com.example.hitmusicapp.base.BaseViewModel
+import com.example.hitmusicapp.base.DataResult
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
+import kotlin.coroutines.resume
+import kotlin.coroutines.suspendCoroutine
 
-class CreateNewPasswordViewModel : ViewModel() {
+class CreateNewPasswordViewModel : BaseViewModel() {
     var newPassword = ""
     var tokenResetPassword = ""
     private val _status = MutableLiveData<Int>()
@@ -28,10 +30,10 @@ class CreateNewPasswordViewModel : ViewModel() {
 
     fun createNewPassword() {
         val api = ApiHelper.getInstance().resetPassword(body).enqueue(
-            object : Callback<ApiResponse<String>> {
+            object : Callback<ApiResponse<Nothing>> {
                 override fun onResponse(
-                    call: Call<ApiResponse<String>>,
-                    response: Response<ApiResponse<String>>
+                    call: Call<ApiResponse<Nothing>>,
+                    response: Response<ApiResponse<Nothing>>
                 ) {
                     if (response.isSuccessful) {
                         _message.value = response.body()?.message
@@ -39,9 +41,8 @@ class CreateNewPasswordViewModel : ViewModel() {
                         _message.value = "Oops! Something went wrong"
                     }
                 }
-
-                override fun onFailure(call: Call<ApiResponse<String>>, t: Throwable) {
-                    _message.value = "Oops! Something went wrong"
+                override fun onFailure(call: Call<ApiResponse<Nothing>>, t: Throwable) {
+                    _message.value = "Oops! Something went wrong..."
                 }
 
             }

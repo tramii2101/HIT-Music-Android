@@ -5,6 +5,6 @@ data class ApiResponse<T>(
     val message: String,
     val data: T,
     val tokenVerifyOTP: String?,
-    val tokenResetPassword: String?
-
+    val tokenResetPassword: String?,
+    val accessToken: String?
 )

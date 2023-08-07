@@ -17,24 +17,24 @@ import com.example.hitmusicapp.screen.authentication.create_new_password.CreateN
 
 class EnterCodeFragment : BaseFragment<FragmentEnterCodeBinding>() {
 
-    val viewModel: EnterCodeViewModel
-        get() = ViewModelProvider(this)[EnterCodeViewModel::class.java]
+    private val viewModel by lazy {
+        activity?.let { ViewModelProvider(it)[EnterCodeViewModel::class.java] }
+    }
 
 
     override fun handleEvent() {
         val sharedPreferences = requireActivity().getSharedPreferences("AUTHENTICATION", Context.MODE_PRIVATE)
-        val otp = binding.otpView.text.toString()
-        var tokenVerify = sharedPreferences.getString("tokenVerifyOTP", null)
+        val tokenVerify = sharedPreferences.getString("tokenVerifyOTP", null)
 
         // Click verify and go to CreateNewPasswordFragment
         binding.tvVerifyOtp.setOnClickListener {
             if (tokenVerify != null) {
-                viewModel.otp = otp
-                viewModel.tokenVerifyOTP = tokenVerify
-                viewModel.sendOTP()
-                viewModel.token.observe(
+                viewModel?.otp = binding.otpView.text.toString()
+                viewModel?.tokenVerifyOTP = tokenVerify
+                viewModel?.getData()
+                viewModel?.token?.observe(
                     this, Observer {
-                        if (it != null) {
+                        if (it != null && it != "") {
                             sharedPreferences.edit().putString("tokenResetPassword", it.toString()).apply()
                             requireActivity().supportFragmentManager.beginTransaction()
                                 .replace(R.id.frame_authen, CreateNewPasswordFragment())
@@ -43,7 +43,9 @@ class EnterCodeFragment : BaseFragment<FragmentEnterCodeBinding>() {
                         } else {
                             Toast.makeText(context, "Error", Toast.LENGTH_SHORT).show()
                         }
+                        Log.e("token reset", it.toString())
                     }
+
                 )
             } else {
                 Toast.makeText(context, "Error", Toast.LENGTH_SHORT).show()
@@ -51,10 +53,6 @@ class EnterCodeFragment : BaseFragment<FragmentEnterCodeBinding>() {
 
         }
 
-//        binding.otpView.setText("")
-//        binding.otpView.setOtpCompletionListener {
-//            Log.d("Actual Value", it)
-//        }
 
         // Click arrow back and back to previous fragment (ForgotPasswordMethod)
         binding.tvBack.setOnClickListener {
