@@ -93,5 +93,5 @@ abstract class BaseAdapterRecyclerView<T, VB : ViewBinding>
         return dataList.size
     }
 
-    abstract fun inflateViewBinding(inflater: LayoutInflater, parent: ViewGroup): VB
+    abstract fun inflateViewBinding(inflate: LayoutInflater, parent: ViewGroup): VB
 }
