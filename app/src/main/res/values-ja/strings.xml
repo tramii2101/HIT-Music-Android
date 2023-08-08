@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">HIT Music</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">こんにちは、空白のフラグメント</string>
+    <string name="title_activity_main">MainActivity</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">最初のフラグメント</string>
+    <string name="second_fragment_label">2番目のフラグメント</string>
+
+    <string name="select_method">パスワードをリセットするために、OTPがこのメールアドレスに送信されます</string>
+    <string name="send_code">コードが送信されました </string>
+    <string name="create_new_password">新しいパスワードを作成</string>
+    <string name="title_activity_authentication">AuthenticationActivity</string>
+
+    <string name="welcome">ようこそ</string>
+
+    <string name="hello_first_fragment">こんにちは、最初のフラグメント</string>
+    <string name="hello_second_fragment">こんにちは、2番目のフラグメント。引数：%1$s</string>
+    <string name="create_your_account">アカウントを作成</string>
+    <string name="login_your_account">アカウントにログイン</string>
+    <string name="already_have_an_account_sign_in">すでにアカウントをお持ちですか？</string>
+    <string name="do_not_have_an_account_sign_up">アカウントをお持ちでないですか？</string>
+    <string name="email">メールアドレス</string>
+    <string name="password">パスワード</string>
+    <string name="remember_me">私を覚えてますか</string>
+    <string name="sign_in">サインイン</string>
+    <string name="sign_up">サインアップ</string>
+    <string name="forgot_the_password">パスワードをお忘れですか？</string>
+    <string name="redirect">数秒後にリダイレクトされます...</string>
+    <string name="reset_successful">リセットが成功しました</string>
+    <string name="confirm_password">パスワードを確認</string>
+    <string name="fill_your_profile">プロフィールを入力</string>
+    <string name="full_name">フルネーム</string>
+    <string name="nick_name">ニックネーム</string>
+    <string name="date_of_birth">生年月日</string>
+    <string name="phone_number"> 電話番号 </string>
+    <string name="skip">スキップ</string>
+    <string name="continue_1">続行</string>
+    <string name="home">ホーム</string>
+    <string name="explore">探検する</string>
+    <string name="library">ライブラリ</string>
+    <string name="profile">プロフィール</string>
+    <string name="notification">通知</string>
+    <string name="audio_video">オーディオ＆ビデオ</string>
+    <string name="playback">再生</string>
+    <string name="data_saver">データの節約とストレージ</string>
+    <string name="security">セキュリティ</string>
+    <string name="language">言語</string>
+    <string name="vietnam">ベトナム語</string>
+    <string name="english">英語</string>
+    <string name="dark_mode">ダークモード</string>
+    <string name="log_out">ログアウト</string>
+    <string name="are_you">本当にログアウトしますか？</string>
+    <string name="cancel">キャンセル</string>
+    <string name="yes_log_out">はい、ログアウトします</string>
+    <string name="suggested">提案</string>
+    <string name="others">その他</string>
+    <string name="korean">韓国語</string>
+    <string name="hindi">ヒンディー語</string>
+    <string name="japanese">日本語</string>
+    <string name="french">フランス語</string>
+    <string name="arabic">アラビア語</string>
+    <string name="spanish">スペイン語</string>
+    <string name="russian">ロシア語</string>
+    <string name="indonesia">インドネシア語</string>
+</resources>

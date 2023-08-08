@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">HIT Music</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">안녕하세요 빈 프래그먼트</string>
+    <string name="title_activity_main">MainActivity</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">첫 번째 프래그먼트</string>
+    <string name="second_fragment_label">두 번째 프래그먼트</string>
+
+    <string name="select_method">비밀번호 재설정을 위해 이 이메일로 OTP가 전송됩니다</string>
+    <string name="send_code">코드가 다음으로 전송되었습니다 </string>
+    <string name="create_new_password">새 비밀번호를 만들기</string>
+    <string name="title_activity_authentication">AuthenticationActivity</string>
+
+    <string name="welcome">환영합니다</string>
+
+    <string name="hello_first_fragment">안녕하세요 첫 번째 프래그먼트</string>
+    <string name="hello_second_fragment">안녕하세요 두 번째 프래그먼트. 인수: %1$s</string>
+    <string name="create_your_account">계정 만들기</string>
+    <string name="login_your_account">계정 로그인</string>
+    <string name="already_have_an_account_sign_in">이미 계정이 있으신가요?</string>
+    <string name="do_not_have_an_account_sign_up">계정이 없으신가요?</string>
+    <string name="email">이메일</string>
+    <string name="password">비밀번호</string>
+    <string name="remember_me">기억하기</string>
+    <string name="sign_in">로그인</string>
+    <string name="sign_up">가입하기</string>
+    <string name="forgot_the_password">비밀번호를 잊으셨나요?</string>
+    <string name="redirect">몇 초 후에 리디렉션 됩니다...</string>
+    <string name="reset_successful">재설정 성공</string>
+    <string name="confirm_password">비밀번호 확인</string>
+    <string name="fill_your_profile">프로필 작성</string>
+    <string name="full_name">성명</string>
+    <string name="nick_name">닉네임</string>
+    <string name="date_of_birth">생년월일</string>
+    <string name="phone_number"> 전화번호 </string>
+    <string name="skip"> 건너뛰기</string>
+    <string name="continue_1"> 계속하기</string>
+    <string name="home"> 홈</string>
+    <string name="explore"> 탐색</string>
+    <string name="library"> 라이브러리</string>
+    <string name="profile"> 프로필</string>
+    <string name="notification"> 알림</string>
+    <string name="audio_video"> 오디오 &amp; 비디오</string>
+    <string name="playback"> 재생</string>
+    <string name="data_saver"> 데이터 절약 &amp; 저장</string>
+    <string name="security"> 보안</string>
+    <string name="language"> 언어</string>
+    <string name="vietnam"> 베트남어</string>
+    <string name="english"> 영어</string>
+    <string name="dark_mode"> 다크 모드</string>
+    <string name="log_out">로그아웃</string>
+    <string name="are_you">정말 로그아웃 하시겠습니까?</string>
+    <string name="cancel">취소</string>
+    <string name="yes_log_out">예, 로그아웃</string>
+    <string name="suggested">추천</string>
+    <string name="others">기타</string>
+    <string name="korean">한국어</string>
+    <string name="hindi">힌디어</string>
+    <string name="japanese">일본어</string>
+    <string name="french">프랑스어</string>
+    <string name="arabic">아랍어</string>
+    <string name="spanish">스페인어</string>
+    <string name="russian">러시아어</string>
+    <string name="indonesia">인도네시아어</string>
+</resources>

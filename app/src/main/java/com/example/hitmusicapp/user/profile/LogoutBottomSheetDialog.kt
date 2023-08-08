@@ -5,8 +5,25 @@ import com.example.hitmusicapp.base.BaseBottomSheetDialog
 import com.example.hitmusicapp.databinding.BottomLogOutBinding
 
 class LogoutBottomSheetDialog : BaseBottomSheetDialog<BottomLogOutBinding>() {
-    override fun initListener() {
+    private var logOutClickListener: OnClickListener? = null
 
+    interface OnClickListener {
+        fun onYesClick()
+        fun onNoClick()
+    }
+
+    fun setOnClickListener(listener: OnClickListener) {
+        logOutClickListener = listener
+    }
+
+    override fun initListener() {
+        binding.cancelLogout.setOnClickListener {
+            logOutClickListener?.onNoClick()
+        }
+        binding.yesLogout.setOnClickListener {
+            logOutClickListener?.onYesClick()
+
+        }
     }
 
     override fun initData() {

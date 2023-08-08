@@ -40,6 +40,10 @@
 
     </style>
 
+    <style name="PEN_EDIT_PROFILE">
+        <item name="android:src">@drawable/pen_edit_profile</item>
+    </style>
+
     <style name="a">
         <item name="android:background">@drawable/button_layout</item>
         <item name="android:textColor">@color/green_c</item>
@@ -66,6 +70,10 @@
         <item name="android:background">@drawable/bg_btn_nav</item>
         <item name="itemIconTint">@color/color_btn_nav</item>
         <item name="itemTextColor">@color/color_btn_nav</item>
+    </style>
+
+    <style name="BACK">
+        <item name="android:src">@drawable/arrow_back</item>
     </style>
 
 </resources>

@@ -7,7 +7,9 @@ import androidx.viewpager2.adapter.FragmentStateAdapter
 import com.example.hitmusicapp.user.explore.ExploreFragment
 import com.example.hitmusicapp.user.home.HomeFragment
 import com.example.hitmusicapp.user.library.LibraryFragment
+import com.example.hitmusicapp.user.profile.OnItemClickListener
 import com.example.hitmusicapp.user.profile.ProfileFragment
+import com.example.hitmusicapp.user.profile.onItemClickListener
 
 
 class ViewPagerAdapter(fragmentManager: FragmentManager, lifecycle: Lifecycle) :
@@ -32,5 +34,9 @@ class ViewPagerAdapter(fragmentManager: FragmentManager, lifecycle: Lifecycle) :
             }
 
         }
+    }
+
+    fun setOnClickListener(listener: OnItemClickListener) {
+        onItemClickListener = listener
     }
 }

@@ -14,7 +14,7 @@
         <androidx.appcompat.widget.AppCompatImageView
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:layout_weight="1.5"
+            android:layout_weight="1"
             android:src="@drawable/logo"
             android:theme="@style/ImageView" />
 
@@ -23,6 +23,7 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="5"
+
             android:fontFamily="@font/nunito_extra_bold_800"
             android:gravity="center_vertical"
             android:text="@string/profile"
@@ -33,7 +34,7 @@
             android:id="@+id/logout_profile"
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:layout_weight="0.7"
+            android:layout_weight="0.4"
             android:src="@drawable/menu"
             android:theme="@style/ImageView" />
 
@@ -41,43 +42,45 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="100dp"
+        android:layout_height="80dp"
         android:layout_marginTop="20dp">
 
         <de.hdodenhof.circleimageview.CircleImageView
-            android:layout_width="100dp"
+            android:id="@+id/avatar"
+            android:layout_width="80dp"
             android:layout_height="match_parent"
-
             android:src="@drawable/logo"
             android:theme="@style/BG" />
 
         <ImageView
-            android:layout_width="25dp"
-            android:layout_height="25dp"
-            android:layout_marginStart="-25dp"
-            android:layout_marginTop="73dp"
+            android:layout_width="22dp"
+            android:layout_height="22dp"
+            android:layout_marginStart="-20dp"
+            android:layout_marginTop="55dp"
             android:src="@drawable/pen_dark"
             android:theme="@style/PEN" />
 
         <LinearLayout
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:layout_marginLeft="30dp"
+            android:layout_marginLeft="20dp"
             android:layout_weight="1"
             android:gravity="center"
             android:orientation="vertical">
 
             <TextView
+                android:id="@+id/userName"
                 style="@style/TEXT"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="4dp"
                 android:fontFamily="@font/nunito_extra_bold_800"
                 android:text="@string/nick_name"
-                android:textSize="25sp"
+                android:textSize="22sp"
                 android:textStyle="bold" />
 
             <TextView
+                android:id="@+id/email"
                 style="@style/TEXT"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -91,12 +94,23 @@
 
     <LinearLayout
         android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="20dp"
+        android:background="@color/teal_200">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="40dp">
 
         <ImageView
             android:layout_width="50dp"
-            android:layout_height="30dp"
+            android:layout_height="25dp"
             android:src="@drawable/user2"
             android:theme="@style/ImageView" />
 
@@ -108,9 +122,10 @@
             android:layout_weight="7"
             android:fontFamily="@font/nunito_semi_bold_600"
             android:text="@string/profile"
-            android:textSize="19sp" />
+            android:textSize="18sp" />
 
         <ImageView
+            android:id="@+id/profileDetails"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="0.4"
@@ -121,11 +136,11 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="24dp">
+        android:layout_marginTop="30dp">
 
         <ImageView
             android:layout_width="50dp"
-            android:layout_height="30dp"
+            android:layout_height="25dp"
             android:src="@drawable/notification"
             android:theme="@style/ImageView" />
 
@@ -137,9 +152,10 @@
             android:layout_weight="7"
             android:fontFamily="@font/nunito_semi_bold_600"
             android:text="@string/notification"
-            android:textSize="19sp" />
+            android:textSize="18sp" />
 
         <ImageView
+            android:id="@+id/profileNotification"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="0.4"
@@ -150,11 +166,11 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="24dp">
+        android:layout_marginTop="30dp">
 
         <ImageView
             android:layout_width="50dp"
-            android:layout_height="30dp"
+            android:layout_height="25dp"
             android:src="@drawable/voice"
             android:theme="@style/ImageView" />
 
@@ -166,9 +182,10 @@
             android:layout_weight="7"
             android:fontFamily="@font/nunito_semi_bold_600"
             android:text="@string/audio_video"
-            android:textSize="19sp" />
+            android:textSize="18sp" />
 
         <ImageView
+            android:id="@+id/profileAudioVideo"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="0.4"
@@ -179,11 +196,11 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="24dp">
+        android:layout_marginTop="30dp">
 
         <ImageView
             android:layout_width="50dp"
-            android:layout_height="30dp"
+            android:layout_height="25dp"
             android:src="@drawable/playback"
             android:theme="@style/ImageView" />
 
@@ -195,9 +212,10 @@
             android:layout_weight="7"
             android:fontFamily="@font/nunito_semi_bold_600"
             android:text="@string/playback"
-            android:textSize="19sp" />
+            android:textSize="18sp" />
 
         <ImageView
+            android:id="@+id/profilePlayback"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="0.4"
@@ -208,11 +226,11 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="24dp">
+        android:layout_marginTop="30dp">
 
         <ImageView
             android:layout_width="50dp"
-            android:layout_height="30dp"
+            android:layout_height="25dp"
             android:src="@drawable/database"
             android:theme="@style/ImageView" />
 
@@ -224,9 +242,10 @@
             android:layout_weight="7"
             android:fontFamily="@font/nunito_semi_bold_600"
             android:text="@string/data_saver"
-            android:textSize="19sp" />
+            android:textSize="18sp" />
 
         <ImageView
+            android:id="@+id/profileDataStorage"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_marginTop="4dp"
@@ -238,11 +257,11 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="24dp">
+        android:layout_marginTop="30dp">
 
         <ImageView
             android:layout_width="50dp"
-            android:layout_height="30dp"
+            android:layout_height="25dp"
             android:src="@drawable/security"
             android:theme="@style/ImageView" />
 
@@ -254,9 +273,10 @@
             android:layout_weight="7"
             android:fontFamily="@font/nunito_semi_bold_600"
             android:text="@string/security"
-            android:textSize="19sp" />
+            android:textSize="18sp" />
 
         <ImageView
+            android:id="@+id/profileSecurity"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="0.4"
@@ -267,11 +287,11 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="24dp">
+        android:layout_marginTop="30dp">
 
         <ImageView
             android:layout_width="50dp"
-            android:layout_height="30dp"
+            android:layout_height="25dp"
             android:src="@drawable/language"
             android:theme="@style/ImageView" />
 
@@ -283,16 +303,17 @@
             android:layout_weight="7"
             android:fontFamily="@font/nunito_semi_bold_600"
             android:text="@string/language"
-            android:textSize="19sp" />
+            android:textSize="18sp" />
 
         <TextView
+            android:id="@+id/languageDefault"
             style="@style/TEXT"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="4"
             android:gravity="center_vertical"
             android:text="@string/english"
-            android:textSize="19sp" />
+            android:textSize="18sp" />
 
         <ImageView
             android:id="@+id/languageProfile"
@@ -306,11 +327,11 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="24dp">
+        android:layout_marginTop="30dp">
 
         <ImageView
             android:layout_width="50dp"
-            android:layout_height="30dp"
+            android:layout_height="25dp"
             android:layout_gravity="center"
             android:src="@drawable/show_password"
             android:theme="@style/ImageView" />
@@ -324,7 +345,7 @@
             android:fontFamily="@font/nunito_semi_bold_600"
             android:gravity="center_vertical"
             android:text="@string/dark_mode"
-            android:textSize="19sp" />
+            android:textSize="18sp" />
 
         <!--        <LinearLayout-->
         <!--            android:layout_width="0dp"-->
@@ -340,7 +361,7 @@
         <Switch
             android:id="@+id/sw"
             android:layout_width="50dp"
-            android:layout_height="30dp" />
+            android:layout_height="25dp" />
         <!--        </LinearLayout>-->
     </LinearLayout>
 

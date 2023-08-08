@@ -10,6 +10,7 @@ import androidx.viewbinding.ViewBinding
 abstract class BaseFragment<VB : ViewBinding> : Fragment() {
     protected lateinit var binding: VB
 
+
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,

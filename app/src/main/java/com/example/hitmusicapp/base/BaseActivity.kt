@@ -38,8 +38,6 @@ abstract class BaseActivity<VB : ViewBinding> : AppCompatActivity() {
 
     abstract fun initView()
 
-    abstract fun innitData()
-
     abstract fun handleEvent()
 
     abstract fun bindData()

@@ -1,12 +1,304 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    style="@style/SCREEN"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
     tools:context=".user.profile.LanguageFragment">
 
+    <LinearLayout
+        android:layout_width="match_parent"
+
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/backLanguage"
+            style="@style/BACK"
+            android:layout_width="30dp"
+            android:layout_height="35dp"
+            android:layout_gravity="center" />
+
+        <TextView
+            style="@style/TEXT"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginStart="16dp"
+            android:fontFamily="@font/nunito_extra_bold_800"
+            android:text="@string/language"
+            android:textSize="25sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
     <TextView
+        style="@style/TEXT"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="sd" />
-</FrameLayout>
+        android:layout_marginTop="24dp"
+        android:fontFamily="@font/nunito_extra_bold_800"
+        android:text="@string/suggested"
+        android:textSize="22sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="27dp">
+
+        <TextView
+            style="@style/TEXT"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="8"
+            android:fontFamily="@font/nunito_semi_bold_600"
+            android:text="@string/english"
+            android:textSize="18sp" />
+
+        <ImageView
+            android:id="@+id/eng"
+            android:layout_width="0dp"
+            android:layout_height="20dp"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:src="@drawable/circle_unselected" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="27dp">
+
+        <TextView
+            style="@style/TEXT"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="8"
+            android:fontFamily="@font/nunito_semi_bold_600"
+            android:text="@string/vietnam"
+            android:textSize="18sp" />
+
+        <ImageView
+            android:id="@+id/vi"
+            android:layout_width="0dp"
+            android:layout_height="20dp"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:src="@drawable/circle_unselected" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="16dp"
+        android:background="@color/teal_200">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </LinearLayout>
+
+    <TextView
+        style="@style/TEXT"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:fontFamily="@font/nunito_extra_bold_800"
+        android:text="@string/others"
+        android:textSize="22sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="27dp">
+
+        <TextView
+            style="@style/TEXT"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="8"
+            android:fontFamily="@font/nunito_semi_bold_600"
+            android:text="@string/korean"
+            android:textSize="18sp" />
+
+        <ImageView
+            android:id="@+id/ko"
+            android:layout_width="0dp"
+            android:layout_height="20dp"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:src="@drawable/circle_unselected" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="27dp">
+
+        <TextView
+            style="@style/TEXT"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="8"
+            android:fontFamily="@font/nunito_semi_bold_600"
+            android:text="@string/hindi"
+            android:textSize="18sp" />
+
+        <ImageView
+            android:id="@+id/hi"
+            android:layout_width="0dp"
+            android:layout_height="20dp"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:src="@drawable/circle_unselected" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="27dp">
+
+        <TextView
+            style="@style/TEXT"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="8"
+            android:fontFamily="@font/nunito_semi_bold_600"
+            android:text="@string/japanese"
+            android:textSize="18sp" />
+
+        <ImageView
+            android:id="@+id/ja"
+            android:layout_width="0dp"
+            android:layout_height="20dp"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:src="@drawable/circle_unselected" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="27dp">
+
+        <TextView
+            style="@style/TEXT"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="8"
+            android:fontFamily="@font/nunito_semi_bold_600"
+            android:text="@string/french"
+            android:textSize="18sp" />
+
+        <ImageView
+            android:id="@+id/fr"
+            android:layout_width="0dp"
+            android:layout_height="20dp"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:src="@drawable/circle_unselected" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="27dp">
+
+        <TextView
+            style="@style/TEXT"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="8"
+            android:fontFamily="@font/nunito_semi_bold_600"
+            android:text="@string/arabic"
+            android:textSize="18sp" />
+
+        <ImageView
+            android:id="@+id/ar"
+            android:layout_width="0dp"
+            android:layout_height="20dp"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:src="@drawable/circle_unselected" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="27dp">
+
+        <TextView
+            style="@style/TEXT"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="8"
+            android:fontFamily="@font/nunito_semi_bold_600"
+            android:text="@string/spanish"
+            android:textSize="18sp" />
+
+        <ImageView
+            android:id="@+id/es"
+            android:layout_width="0dp"
+            android:layout_height="20dp"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:src="@drawable/circle_unselected" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="27dp">
+
+        <TextView
+            style="@style/TEXT"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="8"
+            android:fontFamily="@font/nunito_semi_bold_600"
+            android:text="@string/russian"
+            android:textSize="18sp" />
+
+        <ImageView
+            android:id="@+id/ru"
+            android:layout_width="0dp"
+            android:layout_height="20dp"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:src="@drawable/circle_unselected" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="27dp">
+
+        <TextView
+            style="@style/TEXT"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="8"
+            android:fontFamily="@font/nunito_semi_bold_600"
+            android:text="@string/indonesia"
+            android:textSize="18sp" />
+
+        <ImageView
+            android:id="@+id/in"
+            android:layout_width="0dp"
+            android:layout_height="20dp"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:src="@drawable/circle_unselected" />
+
+    </LinearLayout>
+
+</LinearLayout>

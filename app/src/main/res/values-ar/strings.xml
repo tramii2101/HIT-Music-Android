@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">HIT Music</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">مرحبًا بك في شريحة فارغة</string>
+    <string name="title_activity_main">MainActivity</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">الشريحة الأولى</string>
+    <string name="second_fragment_label">الشريحة الثانية</string>
+
+    <string name="select_method">سيتم إرسال رمز OTP إلى هذا البريد الإلكتروني لإعادة تعيين كلمة المرور الخاصة بك</string>
+    <string name="send_code">تم إرسال الرمز إلى </string>
+    <string name="create_new_password">إنشاء كلمة مرور جديدة</string>
+    <string name="title_activity_authentication">AuthenticationActivity</string>
+
+    <string name="welcome">مرحبًا</string>
+
+    <string name="hello_first_fragment">مرحبًا بك في الشريحة الأولى</string>
+    <string name="hello_second_fragment">مرحبًا بك في الشريحة الثانية. البيانات: %1$s</string>
+    <string name="create_your_account">إنشاء حسابك</string>
+    <string name="login_your_account">تسجيل الدخول إلى حسابك</string>
+    <string name="already_have_an_account_sign_in">هل لديك حساب؟</string>
+    <string name="do_not_have_an_account_sign_up">ليس لديك حساب؟</string>
+    <string name="email">البريد الإلكتروني</string>
+    <string name="password">كلمة المرور</string>
+    <string name="remember_me">تذكرني</string>
+    <string name="sign_in">تسجيل الدخول</string>
+    <string name="sign_up">التسجيل</string>
+    <string name="forgot_the_password">هل نسيت كلمة المرور؟</string>
+    <string name="redirect">ستتم إعادة توجيهك خلال بضع ثوانٍ</string>
+    <string name="reset_successful">تم إعادة التعيين بنجاح</string>
+    <string name="confirm_password">تأكيد كلمة المرور</string>
+    <string name="fill_your_profile">ملء ملف التعريف الخاص بك</string>
+    <string name="full_name">الاسم الكامل</string>
+    <string name="nick_name">الاسم المستعار</string>
+    <string name="date_of_birth">تاريخ الميلاد</string>
+    <string name="phone_number">رقم الهاتف</string>
+    <string name="skip">تخطى</string>
+    <string name="continue_1">استمر</string>
+    <string name="home">الصفحة الرئيسية</string>
+    <string name="explore">استكشاف</string>
+    <string name="library">المكتبة</string>
+    <string name="profile">الملف الشخصي</string>
+    <string name="notification">الإشعارات</string>
+    <string name="audio_video">الصوت والفيديو</string>
+    <string name="playback">تشغيل</string>
+    <string name="data_saver">توفير البيانات والتخزين</string>
+    <string name="security">الأمان</string>
+    <string name="language">اللغة</string>
+    <string name="vietnam">الفيتنامية</string>
+    <string name="english">الإنجليزية</string>
+    <string name="dark_mode">الوضع الداكن</string>
+    <string name="log_out">تسجيل الخروج</string>
+    <string name="are_you">هل أنت متأكد من أنك تريد تسجيل الخروج؟</string>
+    <string name="cancel">إلغاء</string>
+    <string name="yes_log_out">نعم ، تسجيل الخروج</string>
+    <string name="suggested">مقترح</string>
+    <string name="others">آخرون</string>
+    <string name="korean">الكورية</string>
+    <string name="hindi">الهندية</string>
+    <string name="spanish">الإسبانية</string>
+    <string name="french">الفرنسية</string>
+    <string name="arabic">العربية</string>
+    <string name="japanese">اليابانية</string>
+    <string name="russian">الروسية</string>
+    <string name="indonesia">الإندونيسية</string>
+</resources>

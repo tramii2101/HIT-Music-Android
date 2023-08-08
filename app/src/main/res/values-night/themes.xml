@@ -38,6 +38,11 @@
     <style name="a">
         <item name="android:background">@drawable/button_layout_dark</item>
         <item name="android:textColor">@color/white</item>
+
+    </style>
+
+    <style name="PEN_EDIT_PROFILE">
+        <item name="android:src">@drawable/pen_edit_profile_dark</item>
     </style>
     <!--    <color name="b">@color/grey_b</color>-->
     <style name="ab">
@@ -69,5 +74,9 @@
         <item name="android:background">@drawable/bg_btn_nav_dark</item>
         <item name="itemIconTint">@color/color_btn_nav_dark</item>
         <item name="itemTextColor">@color/color_btn_nav_dark</item>
+    </style>
+
+    <style name="BACK">
+        <item name="android:src">@drawable/arrow_back_dark</item>
     </style>
 </resources>

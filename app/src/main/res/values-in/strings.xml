@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">HIT Music</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Halo fragmen kosong</string>
+    <string name="title_activity_main">MainActivity</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">Fragment Pertama</string>
+    <string name="second_fragment_label">Fragment Kedua</string>
+
+    <string name="select_method">OTP akan dikirimkan ke email ini untuk mereset kata sandi Anda</string>
+    <string name="send_code">Kode telah dikirimkan ke </string>
+    <string name="create_new_password">Buat kata sandi baru Anda</string>
+    <string name="title_activity_authentication">AuthenticationActivity</string>
+
+    <string name="welcome">Selamat Datang</string>
+
+    <string name="hello_first_fragment">Halo fragment pertama</string>
+    <string name="hello_second_fragment">Halo fragment kedua. Argumen: %1$s</string>
+    <string name="create_your_account">Buat Akun Anda</string>
+    <string name="login_your_account">Masuk ke Akun Anda</string>
+    <string name="already_have_an_account_sign_in">Sudah memiliki akun?</string>
+    <string name="do_not_have_an_account_sign_up">Belum memiliki akun?</string>
+    <string name="email">Surel</string>
+    <string name="password">Kata Sandi</string>
+    <string name="remember_me">Ingat Saya</string>
+    <string name="sign_in">Masuk</string>
+    <string name="sign_up">Daftar</string>
+    <string name="forgot_the_password">Lupa kata sandi?</string>
+    <string name="redirect">Anda akan diarahkan dalam beberapa detik...</string>
+    <string name="reset_successful">Berhasil Mereset</string>
+    <string name="confirm_password">Konfirmasi Kata Sandi</string>
+    <string name="fill_your_profile">Isi Profil Anda</string>
+    <string name="full_name">Nama Lengkap</string>
+    <string name="nick_name">Nama Panggilan</string>
+    <string name="date_of_birth">Tanggal Lahir</string>
+    <string name="phone_number">Nomor Telepon</string>
+    <string name="skip">Lewati</string>
+    <string name="continue_1">Lanjutkan</string>
+    <string name="home">Beranda</string>
+    <string name="explore">Jelajahi</string>
+    <string name="library">Pustaka</string>
+    <string name="profile">Profil</string>
+    <string name="notification">Pemberitahuan</string>
+    <string name="audio_video">Audio &amp; Video</string>
+    <string name="playback">Putar</string>
+    <string name="data_saver">Penghemat Data &amp; Penyimpanan</string>
+    <string name="security">Keamanan</string>
+    <string name="language">Bahasa</string>
+    <string name="vietnam">Vietnam</string>
+    <string name="english">Inggris</string>
+    <string name="dark_mode">Mode Gelap</string>
+    <string name="log_out">Keluar</string>
+    <string name="are_you">Apakah Anda yakin ingin keluar?</string>
+    <string name="cancel">Batal</string>
+    <string name="yes_log_out">Ya, Keluar</string>
+    <string name="suggested">Saran</string>
+    <string name="others">Lainnya</string>
+    <string name="korean">Korea</string>
+    <string name="hindi">Hindi</string>
+    <string name="japanese">Jepang</string>
+    <string name="french">Perancis</string>
+    <string name="arabic">Arab</string>
+    <string name="spanish">Spanyol</string>
+    <string name="russian">Rusia</string>
+    <string name="indonesia">Indonesia</string>
+</resources>

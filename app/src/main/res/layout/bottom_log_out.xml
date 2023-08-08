@@ -7,6 +7,7 @@
     android:paddingHorizontal="24dp">
 
     <ImageView
+
         android:layout_width="70dp"
         android:layout_height="70dp"
         android:layout_gravity="center"
@@ -14,6 +15,7 @@
         android:src="@drawable/line" />
 
     <TextView
+
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
@@ -42,7 +44,6 @@
         android:layout_marginTop="32dp"
         android:layout_marginBottom="16dp"
         android:fontFamily="@font/nunito_extra_bold_800"
-
         android:gravity="center"
         android:text="@string/are_you"
         android:textSize="18sp" />
@@ -53,22 +54,23 @@
         android:layout_marginBottom="24dp"
         android:theme="@style/SCREEN">
 
+
         <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/cancelLogout"
+            style="@style/a"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginEnd="16dp"
             android:layout_weight="1"
-            style="@style/a"
             android:fontFamily="@font/nunito_semi_bold_600"
             android:padding="16dp"
-            android:textAllCaps="false"
             android:text="@string/cancel"
+            android:textAllCaps="false"
 
             android:textSize="16sp" />
 
-
         <androidx.appcompat.widget.AppCompatButton
-
+            android:id="@+id/yesLogout"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
