@@ -1,12 +1,12 @@
-package com.example.hitmusicapp.user.profile
+package com.example.hitmusicapp.screen.user.home
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import com.example.hitmusicapp.base.BaseFragment
-import com.example.hitmusicapp.databinding.FragmentDataStorageBinding
+import com.example.hitmusicapp.databinding.FragmentHomeBinding
 
 
-class DataStorageFragment : BaseFragment<FragmentDataStorageBinding>() {
+class HomeFragment : BaseFragment<FragmentHomeBinding>() {
     override fun initListener() {
 
     }
@@ -30,7 +30,7 @@ class DataStorageFragment : BaseFragment<FragmentDataStorageBinding>() {
     override fun inflateLayout(
         inflater: LayoutInflater,
         container: ViewGroup?
-    ): FragmentDataStorageBinding {
-        return FragmentDataStorageBinding.inflate(inflater, container, false)
+    ): FragmentHomeBinding {
+        return FragmentHomeBinding.inflate(inflater, container, false)
     }
 }

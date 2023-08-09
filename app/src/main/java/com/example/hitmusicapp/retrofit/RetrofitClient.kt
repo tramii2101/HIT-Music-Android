@@ -1,6 +1,6 @@
 package com.example.hitmusicapp.retrofit
 
-import com.example.hitmusicapp.utils.extension.Constant
+import com.example.hitmusicapp.utils.common.Constant
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Retrofit

@@ -1,4 +1,4 @@
-package com.example.hitmusicapp.user.profile
+package com.example.hitmusicapp.screen.user.profile
 
 
 import android.content.Context

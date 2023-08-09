@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".user.profile.ProfileFragment">
+    tools:context=".screen.user.profile.ProfileFragment">
 
     <LinearLayout
         android:layout_width="match_parent"

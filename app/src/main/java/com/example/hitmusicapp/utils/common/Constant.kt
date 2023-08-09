@@ -1,4 +1,4 @@
-package com.example.hitmusicapp.utils.extension
+package com.example.hitmusicapp.utils.common
 
 import android.content.res.Resources
 

@@ -1,4 +1,4 @@
-package com.example.hitmusicapp.user.profile
+package com.example.hitmusicapp.screen.user.profile
 
 
 import android.content.Context
@@ -17,7 +17,7 @@ import com.example.hitmusicapp.databinding.FragmentProfileBinding
 import com.example.hitmusicapp.entity.ProfileResponse
 import com.example.hitmusicapp.retrofit.ApiService
 import com.example.hitmusicapp.retrofit.RetrofitClient
-import com.example.hitmusicapp.utils.extension.Constant
+import com.example.hitmusicapp.utils.common.Constant
 import com.example.hitmusicapp.utils.extension.ExtensionFunction.toast
 import retrofit2.Call
 import retrofit2.Response

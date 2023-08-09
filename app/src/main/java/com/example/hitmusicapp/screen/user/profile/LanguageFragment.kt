@@ -1,4 +1,4 @@
-package com.example.hitmusicapp.user.profile
+package com.example.hitmusicapp.screen.user.profile
 
 
 import android.content.Context
@@ -10,7 +10,7 @@ import com.example.hitmusicapp.MainActivity
 import com.example.hitmusicapp.R
 import com.example.hitmusicapp.base.BaseFragment
 import com.example.hitmusicapp.databinding.FragmentLanguageBinding
-import com.example.hitmusicapp.utils.extension.Constant
+import com.example.hitmusicapp.utils.common.Constant
 
 
 class LanguageFragment : BaseFragment<FragmentLanguageBinding>() {

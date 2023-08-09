@@ -11,8 +11,8 @@ import androidx.viewpager2.widget.ViewPager2
 import com.example.hitmusicapp.adapters.ViewPagerAdapter
 import com.example.hitmusicapp.base.BaseActivity
 import com.example.hitmusicapp.databinding.ActivityMainBinding
-import com.example.hitmusicapp.user.profile.LogoutBottomSheetDialog
-import com.example.hitmusicapp.user.profile.OnItemClickListener
+import com.example.hitmusicapp.screen.user.profile.LogoutBottomSheetDialog
+import com.example.hitmusicapp.screen.user.profile.OnItemClickListener
 import java.util.*
 
 

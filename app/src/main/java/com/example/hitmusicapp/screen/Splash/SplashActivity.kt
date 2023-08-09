@@ -11,7 +11,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.app.AppCompatDelegate
 import com.example.hitmusicapp.R
 import com.example.hitmusicapp.screen.authentication.login.LoginActivity
-import com.example.hitmusicapp.utils.extension.Constant
+import com.example.hitmusicapp.utils.common.Constant
 import java.util.*
 
 

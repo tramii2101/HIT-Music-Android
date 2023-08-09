@@ -4,12 +4,12 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
 import androidx.lifecycle.Lifecycle
 import androidx.viewpager2.adapter.FragmentStateAdapter
-import com.example.hitmusicapp.user.explore.ExploreFragment
-import com.example.hitmusicapp.user.home.HomeFragment
-import com.example.hitmusicapp.user.library.LibraryFragment
-import com.example.hitmusicapp.user.profile.OnItemClickListener
-import com.example.hitmusicapp.user.profile.ProfileFragment
-import com.example.hitmusicapp.user.profile.onItemClickListener
+import com.example.hitmusicapp.screen.user.explore.ExploreFragment
+import com.example.hitmusicapp.screen.user.home.HomeFragment
+import com.example.hitmusicapp.screen.user.library.LibraryFragment
+import com.example.hitmusicapp.screen.user.profile.OnItemClickListener
+import com.example.hitmusicapp.screen.user.profile.ProfileFragment
+import com.example.hitmusicapp.screen.user.profile.onItemClickListener
 
 
 class ViewPagerAdapter(fragmentManager: FragmentManager, lifecycle: Lifecycle) :
