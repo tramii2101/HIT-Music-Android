@@ -1,4 +1,4 @@
-package com.example.hitmusicapp.api
+package com.example.hitmusicapp.retrofit
 
 data class ApiResponse<T>(
     val status: Int,

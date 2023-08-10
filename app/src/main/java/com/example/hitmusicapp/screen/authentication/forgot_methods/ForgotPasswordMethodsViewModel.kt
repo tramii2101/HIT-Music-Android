@@ -2,11 +2,10 @@ package com.example.hitmusicapp.screen.authentication.forgot_methods
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
-import com.example.hitmusicapp.api.ApiHelper
-import com.example.hitmusicapp.api.ApiResponse
+import com.example.hitmusicapp.retrofit.ApiHelper
+import com.example.hitmusicapp.retrofit.ApiResponse
 import com.example.hitmusicapp.base.BaseViewModel
 import com.example.hitmusicapp.base.DataResult
-import com.google.android.material.color.utilities.MaterialDynamicColors.onError
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response

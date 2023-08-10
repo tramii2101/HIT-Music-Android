@@ -2,14 +2,10 @@ package com.example.hitmusicapp.screen.authentication.enter_code
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
-import androidx.lifecycle.ViewModel
-import androidx.lifecycle.viewModelScope
-import com.example.hitmusicapp.api.ApiHelper
-import com.example.hitmusicapp.api.ApiResponse
+import com.example.hitmusicapp.retrofit.ApiHelper
+import com.example.hitmusicapp.retrofit.ApiResponse
 import com.example.hitmusicapp.base.BaseViewModel
 import com.example.hitmusicapp.base.DataResult
-import com.google.android.material.color.utilities.MaterialDynamicColors.onError
-import kotlinx.coroutines.*
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response

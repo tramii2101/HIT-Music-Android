@@ -1,4 +1,4 @@
-package com.example.hitmusicapp.api
+package com.example.hitmusicapp.retrofit
 
 import com.example.hitmusicapp.utils.common.ApiConstants
 import retrofit2.Retrofit
