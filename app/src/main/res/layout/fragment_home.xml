@@ -157,13 +157,13 @@
                 android:textSize="18sp"
                 android:textStyle="bold" />
 
-            <!--            <TextView-->
-            <!--                android:layout_width="wrap_content"-->
-            <!--                android:layout_height="wrap_content"-->
-            <!--                android:layout_gravity="center_vertical"-->
-            <!--                android:text="@string/see_all"-->
-            <!--                android:textColor="@color/green_b"-->
-            <!--                android:textStyle="bold" />-->
+<!--            <TextView-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_gravity="center_vertical"-->
+<!--                android:text="@string/see_all"-->
+<!--                android:textColor="@color/green_b"-->
+<!--                android:textStyle="bold" />-->
         </LinearLayout>
 
         <androidx.recyclerview.widget.RecyclerView
