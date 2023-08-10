@@ -2,15 +2,12 @@ package com.example.hitmusicapp.screen.authentication.create_new_password
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
-import com.example.hitmusicapp.api.ApiHelper
-import com.example.hitmusicapp.api.ApiResponse
+import com.example.hitmusicapp.retrofit.ApiHelper
+import com.example.hitmusicapp.retrofit.ApiResponse
 import com.example.hitmusicapp.base.BaseViewModel
-import com.example.hitmusicapp.base.DataResult
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
-import kotlin.coroutines.resume
-import kotlin.coroutines.suspendCoroutine
 
 class CreateNewPasswordViewModel : BaseViewModel() {
     var newPassword = ""
