@@ -1,0 +1,453 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/SCREEN"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    tools:context=".screen.user.profile.NotificationFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            style="@style/BACK"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_gravity="center" />
+
+        <TextView
+            style="@style/TEXT"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginStart="16dp"
+            android:fontFamily="@font/nunito_extra_bold_800"
+            android:text="@string/notification"
+            android:textSize="25sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="4"
+            android:orientation="vertical">
+
+            <TextView
+                style="@style/TEXT"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/nunito_extra_bold_800"
+                android:text="@string/recommended_music"
+                android:textSize="17sp" />
+
+            <TextView
+                style="@style/TEXT"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:text="@string/push_email"
+                android:textSize="14sp" />
+
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/recommendedMusic"
+            android:layout_width="17dp"
+            android:layout_height="17dp"
+            android:layout_gravity="center"
+            android:src="@drawable/next"
+            android:theme="@style/ImageView" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="4"
+            android:orientation="vertical">
+
+            <TextView
+                style="@style/TEXT"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/nunito_extra_bold_800"
+                android:text="@string/new_music"
+                android:textSize="17sp" />
+
+            <TextView
+                style="@style/TEXT"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:text="@string/push"
+                android:textSize="14sp" />
+
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/newMusic"
+            android:layout_width="17dp"
+            android:layout_height="17dp"
+            android:layout_gravity="center"
+            android:src="@drawable/next"
+            android:theme="@style/ImageView" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="4"
+            android:orientation="vertical">
+
+            <TextView
+                style="@style/TEXT"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/nunito_extra_bold_800"
+                android:text="@string/playlist_updates"
+                android:textSize="17sp" />
+
+            <TextView
+                style="@style/TEXT"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:text="@string/push_email"
+                android:textSize="14sp" />
+
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/playListUpdates"
+            android:layout_width="17dp"
+            android:layout_height="17dp"
+            android:layout_gravity="center"
+            android:src="@drawable/next"
+            android:theme="@style/ImageView" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="4"
+            android:orientation="vertical">
+
+            <TextView
+                style="@style/TEXT"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/nunito_extra_bold_800"
+                android:text="@string/concert_notifications"
+                android:textSize="17sp" />
+
+            <TextView
+                style="@style/TEXT"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:text="@string/push_email"
+                android:textSize="14sp" />
+
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/concertNotifications"
+            android:layout_width="17dp"
+            android:layout_height="17dp"
+            android:layout_gravity="center"
+            android:src="@drawable/next"
+            android:theme="@style/ImageView" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="4"
+            android:orientation="vertical">
+
+            <TextView
+                style="@style/TEXT"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/nunito_extra_bold_800"
+                android:text="@string/artist_updates"
+                android:textSize="17sp" />
+
+            <TextView
+                style="@style/TEXT"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:text="@string/push_email"
+                android:textSize="14sp" />
+
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/artistUpdates"
+            android:layout_width="17dp"
+            android:layout_height="17dp"
+            android:layout_gravity="center"
+            android:src="@drawable/next"
+            android:theme="@style/ImageView" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="4"
+            android:orientation="vertical">
+
+            <TextView
+                style="@style/TEXT"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/nunito_extra_bold_800"
+                android:text="@string/product_news"
+                android:textSize="17sp" />
+
+            <TextView
+                style="@style/TEXT"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:text="@string/email"
+                android:textSize="14sp" />
+
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/productNews"
+            android:layout_width="17dp"
+            android:layout_height="17dp"
+            android:layout_gravity="center"
+            android:src="@drawable/next"
+            android:theme="@style/ImageView" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="4"
+            android:orientation="vertical">
+
+            <TextView
+                style="@style/TEXT"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/nunito_extra_bold_800"
+                android:text="@string/hearme_offers"
+
+                android:textSize="17sp" />
+
+            <TextView
+                style="@style/TEXT"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:text="@string/push_email"
+                android:textSize="14sp" />
+
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/hearmeOffers"
+            android:layout_width="17dp"
+            android:layout_height="17dp"
+            android:layout_gravity="center"
+            android:src="@drawable/next"
+            android:theme="@style/ImageView" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="4"
+            android:orientation="vertical">
+
+            <TextView
+                style="@style/TEXT"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/nunito_extra_bold_800"
+                android:text="@string/new_episodes"
+                android:textSize="17sp" />
+
+            <TextView
+                style="@style/TEXT"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:text="@string/push_email"
+                android:textSize="14sp" />
+
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/newEpisodes"
+            android:layout_width="17dp"
+            android:layout_height="17dp"
+            android:layout_gravity="center"
+            android:src="@drawable/next"
+            android:theme="@style/ImageView" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="4"
+            android:orientation="vertical">
+
+            <TextView
+                style="@style/TEXT"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/nunito_extra_bold_800"
+                android:text="@string/payments_subscriptions"
+                android:textSize="17sp" />
+
+            <TextView
+                style="@style/TEXT"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:text="@string/push_email"
+                android:textSize="14sp" />
+
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/paymentsSubscriptions"
+            android:layout_width="17dp"
+            android:layout_height="17dp"
+            android:layout_gravity="center"
+            android:src="@drawable/next"
+            android:theme="@style/ImageView" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="4"
+            android:orientation="vertical">
+
+            <TextView
+                style="@style/TEXT"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/nunito_extra_bold_800"
+                android:text="@string/new_features"
+                android:textSize="17sp" />
+
+            <TextView
+                style="@style/TEXT"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:text="@string/push"
+                android:textSize="14sp" />
+
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/newFeatures"
+            android:layout_width="17dp"
+            android:layout_height="17dp"
+            android:layout_gravity="center"
+            android:src="@drawable/next"
+            android:theme="@style/ImageView" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="4"
+            android:orientation="vertical">
+
+            <TextView
+                style="@style/TEXT"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/nunito_extra_bold_800"
+                android:text="@string/security"
+                android:textSize="17sp" />
+
+            <TextView
+                style="@style/TEXT"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:text="@string/push_email"
+                android:textSize="14sp" />
+
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/security"
+            android:layout_width="17dp"
+            android:layout_height="17dp"
+            android:layout_gravity="center"
+            android:src="@drawable/next"
+            android:theme="@style/ImageView" />
+    </LinearLayout>
+
+
+</LinearLayout>

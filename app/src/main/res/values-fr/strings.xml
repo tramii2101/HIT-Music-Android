@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">HIT Musique</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Bonjour fragment vide</string>
+    <string name="title_activity_main">Activité Principale</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">Premier Fragment</string>
+    <string name="second_fragment_label">Deuxième Fragment</string>
+
+    <string name="select_method">OTP sera envoyé à cet e-mail pour réinitialiser votre mot de passe</string>
+    <string name="send_code">Le code a été envoyé à </string>
+    <string name="create_new_password">Créez votre nouveau mot de passe</string>
+    <string name="title_activity_authentication">Activité d\'authentification</string>
+
+    <string name="welcome">Bienvenue</string>
+
+    <string name="hello_first_fragment">Bonjour premier fragment</string>
+    <string name="hello_second_fragment">Bonjour deuxième fragment. Argument : %1$s</string>
+    <string name="create_your_account">Créez votre compte</string>
+    <string name="login_your_account">Connectez-vous à votre compte</string>
+    <string name="already_have_an_account_sign_in">Vous avez déjà un compte ?</string>
+    <string name="do_not_have_an_account_sign_up">Vous n\'avez pas de compte ?</string>
+    <string name="email">E-mail</string>
+    <string name="password">Mot de passe</string>
+    <string name="remember_me">Se souvenir de moi</string>
+    <string name="sign_in">Se connecter</string>
+    <string name="sign_up">S\'inscrire</string>
+    <string name="forgot_the_password">Mot de passe oublié ?</string>
+    <string name="redirect">Vous serez redirigé dans quelques secondes...</string>
+    <string name="reset_successful">Réinitialisation réussie</string>
+    <string name="confirm_password">Confirmer le mot de passe</string>
+    <string name="fill_your_profile">Remplissez votre profil</string>
+    <string name="full_name">Nom complet</string>
+    <string name="nick_name">Surnom</string>
+    <string name="date_of_birth">Date de naissance</string>
+    <string name="phone_number">Numéro de téléphone</string>
+    <string name="skip">Passer</string>
+    <string name="continue_1">Continuer</string>
+    <string name="home">Accueil</string>
+    <string name="explore">Explorer</string>
+    <string name="library">Bibliothèque</string>
+    <string name="profile">Profil</string>
+    <string name="notification">Notification</string>
+    <string name="audio_video">Audio &amp; Vidéo</string>
+    <string name="playback">Lecture</string>
+    <string name="data_saver">Économie de données &amp; Stockage</string>
+    <string name="security">Sécurité</string>
+    <string name="language">Langue</string>
+    <string name="vietnam">Vietnamien</string>
+    <string name="english">Anglais</string>
+    <string name="dark_mode">Mode sombre</string>
+    <string name="log_out">Déconnexion</string>
+    <string name="are_you">Êtes-vous sûr de vouloir vous déconnecter ?</string>
+    <string name="cancel">Annuler</string>
+    <string name="yes_log_out">Oui, se déconnecter</string>
+    <string name="suggested">Suggéré</string>
+    <string name="others">Autres</string>
+    <string name="korean">Coréen</string>
+    <string name="hindi">Hindi</string>
+    <string name="japanese">Japonais</string>
+    <string name="french">Français</string>
+    <string name="arabic">Arabe</string>
+    <string name="spanish">Espagnol</string>
+    <string name="russian">Russe</string>
+    <string name="indonesia">Indonésien</string>
+</resources>

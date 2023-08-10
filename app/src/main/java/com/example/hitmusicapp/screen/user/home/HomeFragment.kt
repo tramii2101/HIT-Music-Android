@@ -1,4 +1,4 @@
-package com.example.hitmusicapp.screen.home.fragment
+package com.example.hitmusicapp.screen.user.home
 
 import android.app.Dialog
 import android.content.Intent

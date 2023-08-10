@@ -1,17 +1,19 @@
-package com.example.hitmusicapp.screen.home.fragment
+package com.example.hitmusicapp.screen.user.profile
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import com.example.hitmusicapp.base.BaseFragment
-import com.example.hitmusicapp.databinding.FragmentLibraryBinding
+import com.example.hitmusicapp.databinding.FragmentEditProfileBinding
 
 
-class LibraryFragment : BaseFragment<FragmentLibraryBinding>() {
+class EditProfileFragment : BaseFragment<FragmentEditProfileBinding>() {
+
     override fun initListener() {
 
     }
 
     override fun initView() {
+
 
     }
 
@@ -30,7 +32,7 @@ class LibraryFragment : BaseFragment<FragmentLibraryBinding>() {
     override fun inflateLayout(
         inflater: LayoutInflater,
         container: ViewGroup?
-    ): FragmentLibraryBinding {
-        return FragmentLibraryBinding.inflate(inflater, container, false)
+    ): FragmentEditProfileBinding {
+        return FragmentEditProfileBinding.inflate(inflater, container, false)
     }
 }

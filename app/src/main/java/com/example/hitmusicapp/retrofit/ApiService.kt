@@ -1,5 +1,6 @@
 package com.example.hitmusicapp.retrofit
 
+import com.example.hitmusicapp.entity.*
 import com.example.hitmusicapp.entities.Category
 import com.example.hitmusicapp.entity.ResultsHomeResponse
 import com.example.hitmusicapp.entities.Singer
@@ -15,6 +16,15 @@ import retrofit2.http.POST
 import retrofit2.http.Path
 
 interface ApiService {
+    @POST("/api/auth/login")
+    fun login(@Body loginRequest: LoginRequest?): Call<LoginResponse>
+
+    @POST("/api/auth/register")
+    fun register(@Body registerRequest: RegisterRequest?): Call<RegisterResponse>
+
+    @GET("/api/auth/profile")
+    fun getProfile(@Header("Authorization") accessToken: String): Call<ProfileResponse>
+
     @POST(ApiConstants.FORGOT_PASSWORD)
     fun forgetPassword(
         @Body email: Map<String, String>
@@ -48,5 +58,9 @@ interface ApiService {
     ): Call<ApiResponse<ListSongResponse>>
 
     @GET(ApiConstants.GET_SONG_BY_ID)
-    fun getSongById(@Header("Authorization") accessToken: String, @Path("ID") id: String) : Call<ApiResponse<SongResponse>>
+    fun getSongById(
+        @Header("Authorization") accessToken: String,
+        @Path("ID") id: String
+    ): Call<ApiResponse<SongResponse>>
+
 }

@@ -1,12 +1,11 @@
-package com.example.hitmusicapp.screen.authentication.register
+package com.example.hitmusicapp.screen.user.profile
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import com.example.hitmusicapp.base.BaseFragment
-import com.example.hitmusicapp.databinding.FragmentYourProfileBinding
+import com.example.hitmusicapp.databinding.FragmentNotificationBinding
 
-
-class YourProfileFragment : BaseFragment<FragmentYourProfileBinding>() {
+class NotificationFragment : BaseFragment<FragmentNotificationBinding>() {
     override fun initListener() {
 
     }
@@ -30,7 +29,7 @@ class YourProfileFragment : BaseFragment<FragmentYourProfileBinding>() {
     override fun inflateLayout(
         inflater: LayoutInflater,
         container: ViewGroup?
-    ): FragmentYourProfileBinding {
-        return FragmentYourProfileBinding.inflate(inflater, container, false)
+    ): FragmentNotificationBinding {
+        return FragmentNotificationBinding.inflate(inflater, container, false)
     }
 }

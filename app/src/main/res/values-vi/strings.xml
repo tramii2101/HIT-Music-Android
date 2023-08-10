@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">HIT Music</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Xin chào fragment trống</string>
+    <string name="title_activity_main">MainActivity</string>
+    <!-- Các chuỗi sử dụng cho các fragment trong điều hướng -->
+    <string name="first_fragment_label">Fragment đầu tiên</string>
+    <string name="second_fragment_label">Fragment thứ hai</string>
+
+    <string name="select_method">OTP sẽ được gửi đến email này để đặt lại mật khẩu của bạn</string>
+    <string name="send_code">Mã đã được gửi đến </string>
+    <string name="create_new_password">Tạo mật khẩu mới của bạn</string>
+    <string name="title_activity_authentication">AuthenticationActivity</string>
+
+    <string name="welcome">Chào mừng bạn</string>
+
+    <string name="hello_first_fragment">Xin chào fragment đầu tiên</string>
+    <string name="hello_second_fragment">Xin chào fragment thứ hai. Arg: %1$s</string>
+    <string name="create_your_account">Tạo tài khoản của bạn</string>
+    <string name="login_your_account">Đăng nhập tài khoản của bạn</string>
+    <string name="already_have_an_account_sign_in">Đã có tài khoản?</string>
+    <string name="do_not_have_an_account_sign_up">Chưa có tài khoản?</string>
+    <string name="email">Email</string>
+    <string name="password">Mật khẩu</string>
+    <string name="remember_me">Ghi nhớ tôi</string>
+    <string name="sign_in">Đăng nhập</string>
+    <string name="sign_up">Đăng ký</string>
+    <string name="forgot_the_password">Quên mật khẩu?</string>
+    <string name="redirect">Bạn sẽ được chuyển hướng trong vài giây...</string>
+    <string name="reset_successful">Đặt lại thành công</string>
+    <string name="confirm_password">Xác nhận mật khẩu</string>
+    <string name="fill_your_profile">Điền thông tin hồ sơ của bạn</string>
+    <string name="full_name">Họ và tên</string>
+    <string name="nick_name">Biệt danh</string>
+    <string name="date_of_birth">Ngày sinh</string>
+    <string name="phone_number"> Số điện thoại </string>
+    <string name="skip"> Bỏ qua</string>
+    <string name="continue_1"> Tiếp tục</string>
+    <string name="home"> Trang chủ</string>
+    <string name="explore"> Khám phá</string>
+    <string name="library"> Thư viện</string>
+    <string name="profile"> Hồ sơ</string>
+    <string name="notification"> Thông báo</string>
+    <string name="audio_video"> Âm thanh &amp; Video</string>
+    <string name="playback"> Phát lại</string>
+    <string name="data_saver"> Tiết kiệm dữ liệu &amp; Lưu trữ</string>
+    <string name="security"> Bảo mật</string>
+    <string name="language"> Ngôn ngữ</string>
+    <string name="vietnam"> Tiếng Việt</string>
+    <string name="english"> Tiếng Anh</string>
+    <string name="dark_mode"> Chế độ tối</string>
+    <string name="log_out">Đăng xuất</string>
+    <string name="are_you">Bạn có chắc muốn đăng xuất?</string>
+    <string name="cancel">Hủy</string>
+    <string name="yes_log_out">Có, Đăng xuất</string>
+    <string name="suggested">Đề xuất</string>
+    <string name="others">Khác</string>
+    <string name="korean">Hàn Quốc</string>
+    <string name="hindi">Tiếng Hin-ddi</string>
+    <string name="japanese"> Nhật Bản</string>
+    <string name="french">Tiếng Pháp</string>
+    <string name="arabic">Tiếng Ả Rập</string>
+    <string name="spanish">Tiếng Tây Ban Nha</string>
+    <string name="russian">Tiếng Nga</string>
+    <string name="indonesia">Tiếng Indonesia</string>
+</resources>
