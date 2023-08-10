@@ -5,7 +5,6 @@ import android.view.ViewGroup
 import com.example.hitmusicapp.base.BaseFragment
 import com.example.hitmusicapp.databinding.FragmentExploreBinding
 
-
 class ExploreFragment : BaseFragment<FragmentExploreBinding>() {
     override fun initListener() {
 
@@ -32,4 +31,5 @@ class ExploreFragment : BaseFragment<FragmentExploreBinding>() {
     ): FragmentExploreBinding {
         return FragmentExploreBinding.inflate(inflater, container, false)
     }
+
 }

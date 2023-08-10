@@ -160,7 +160,6 @@ class MainActivity : BaseActivity<ActivityMainBinding>(), OnItemClickListener {
         }
     }
 
-
     override fun handleEvent() {
 
     }
