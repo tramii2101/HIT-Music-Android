@@ -1,4 +1,4 @@
-package com.example.hitmusicapp.screen.home.favourite
+package com.example.hitmusicapp.screen.user.favourite
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
