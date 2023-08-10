@@ -15,6 +15,7 @@ import com.example.hitmusicapp.base.BaseFragment
 import com.example.hitmusicapp.databinding.FragmentHomeBinding
 import com.example.hitmusicapp.screen.play.PlayActivity
 import com.example.hitmusicapp.screen.singer.SingerDetailFragment
+import com.example.hitmusicapp.screen.user.explore.ExploreFragment
 import com.example.hitmusicapp.utils.extension.setGridLayoutManager
 import com.example.hitmusicapp.utils.extension.setLinearLayoutManager
 import com.example.hitmusicapp.utils.extension.start
