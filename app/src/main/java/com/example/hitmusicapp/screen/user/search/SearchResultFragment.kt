@@ -1,4 +1,4 @@
-package com.example.hitmusicapp.screen.home.search
+package com.example.hitmusicapp.screen.user.search
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
