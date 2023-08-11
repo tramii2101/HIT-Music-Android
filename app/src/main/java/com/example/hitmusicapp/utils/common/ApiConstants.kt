@@ -22,4 +22,9 @@ object ApiConstants {
 
     const val GET_SONG_BY_ID = "/api/musics/{ID}"
 
+    const val ADD_TO_FAVOURITE = "/api/favorites/add-music"
+
+    const val GET_SONG_IN_CATEGORY = "/api/musics/category/{categoryId}"
+
+
 }

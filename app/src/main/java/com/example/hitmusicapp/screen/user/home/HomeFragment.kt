@@ -1,30 +1,43 @@
 package com.example.hitmusicapp.screen.user.home
 
 import android.app.Dialog
+import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.ViewGroup
+import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.RecyclerView
+import com.example.hitmusicapp.MainActivity
 import com.example.hitmusicapp.R
 import com.example.hitmusicapp.adapters.CategoryAdapter
 import com.example.hitmusicapp.adapters.SingerAdapter
 import com.example.hitmusicapp.adapters.SongAdapter
 import com.example.hitmusicapp.base.BaseFragment
 import com.example.hitmusicapp.databinding.FragmentHomeBinding
+import com.example.hitmusicapp.screen.category.CategoryFragment
 import com.example.hitmusicapp.screen.play.PlayActivity
 import com.example.hitmusicapp.screen.singer.SingerDetailFragment
 import com.example.hitmusicapp.screen.user.explore.ExploreFragment
+import com.example.hitmusicapp.screen.user.profile.OnItemClickListener
 import com.example.hitmusicapp.utils.extension.setGridLayoutManager
 import com.example.hitmusicapp.utils.extension.setLinearLayoutManager
-import com.example.hitmusicapp.utils.extension.start
 import com.example.hitmusicapp.viewmodel.HomeViewModel
+
 
 class HomeFragment : BaseFragment<FragmentHomeBinding>() {
 
     val viewModel by lazy {
         activity?.let { ViewModelProvider(it) }?.get(HomeViewModel::class.java)
+    }
+
+    val sharedPreferences by lazy {
+        requireActivity().getSharedPreferences("home_pref", Context.MODE_PRIVATE)
+    }
+
+    val sharedPref by lazy {
+        requireActivity().getSharedPreferences("my_preferences", Context.MODE_PRIVATE)
     }
 
     private val dialog by lazy { context?.let { Dialog(it) } }
@@ -42,8 +55,9 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>() {
     }
 
     override fun initData() {
+        val token = sharedPref.getString("accessToken", "")
         viewModel?.accessToken =
-            "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NGMyNzZiNGM1Y2E4ZTMwYTZiMWY3ZGYiLCJpYXQiOjE2OTE1NzU1NDYsImV4cCI6MTY5MTY2MTk0Nn0.U9VPPvsVVc9hj8ZIFQZ9p1_LodnnCWgTpHWY0QbtyR0"
+            "Bearer $token"
         viewModel?.getData()
         viewModel?.listCategory?.observe(this) {
             categoryAdapter.setDataList(it)
@@ -59,15 +73,15 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>() {
 
     }
     override fun initView() {
-        viewModel?.loading?.observe(this) {
-            if (it) {
-                dialog?.start(
-                    false
-                )
-            } else {
-                dialog?.dismiss()
-            }
-        }
+//        viewModel?.loading?.observe(this) {
+//            if (it) {
+//                dialog?.start(
+//                    false
+//                )
+//            } else {
+//                dialog?.dismiss()
+//            }
+//        }
 
         binding.recyclerSinger.setLinearLayoutManager(
             requireContext(),
@@ -92,37 +106,37 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>() {
     override fun initListener() {
         songAdapter.setOnClickItem { item, position ->
             val intent = Intent(requireActivity(), PlayActivity::class.java)
-            val data = item?.id
+            val songId = item?.id
+            val songPosition = position
             val bundle = Bundle()
-            bundle.putString("Song", data)
+            bundle.putString("Song_id", songId)
+            bundle.putInt("Song_position", position)
             intent.putExtras(bundle)
             startActivity(intent)
         }
 
         singerAdapter.setOnClickItem { item, position ->
+            viewModel?.singerPosition = position
             requireActivity().supportFragmentManager.beginTransaction()
-                .replace(R.id.view_pager2, SingerDetailFragment())
+                .replace(R.id.main, SingerDetailFragment())
                 .addToBackStack("Home")
                 .commit()
+            (activity as MainActivity).gone()
         }
 
-        categoryAdapter.setOnClickItem { item, position ->  }
-
-        binding.ivSearch.setOnClickListener {
+        categoryAdapter.setOnClickItem { item, position ->
+            viewModel?.categoryPosition = position
             requireActivity().supportFragmentManager.beginTransaction()
-                .replace(R.id.view_pager2, ExploreFragment())
+                .replace(R.id.main, CategoryFragment())
                 .addToBackStack("Home")
                 .commit()
+            (activity as MainActivity).gone()
         }
+
     }
 
     override fun handleEvent() {
-        binding.ivSearch.setOnClickListener {
-            requireActivity().supportFragmentManager.beginTransaction()
-                .replace(R.id.view_pager2, ExploreFragment())
-                .addToBackStack("Home")
-                .commit()
-        }
+
     }
 
     override fun bindData() {

@@ -1,6 +1,5 @@
 package com.example.hitmusicapp.entities
 
-import android.os.Parcelable
 import com.google.gson.annotations.SerializedName
 
 data class Song (

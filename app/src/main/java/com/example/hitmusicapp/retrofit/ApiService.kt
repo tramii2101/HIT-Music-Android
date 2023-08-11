@@ -13,6 +13,7 @@ import retrofit2.http.Body
 import retrofit2.http.GET
 import retrofit2.http.Header
 import retrofit2.http.POST
+import retrofit2.http.PUT
 import retrofit2.http.Path
 
 interface ApiService {
@@ -62,5 +63,17 @@ interface ApiService {
         @Header("Authorization") accessToken: String,
         @Path("ID") id: String
     ): Call<ApiResponse<SongResponse>>
+
+    @PUT(ApiConstants.ADD_TO_FAVOURITE)
+    fun addToFavourite(
+        @Header("Authorization") accessToken: String,
+        @Body body: Map<String, String>
+    ): Call<ApiResponse<String>>
+
+    @GET(ApiConstants.GET_SONG_IN_CATEGORY)
+    fun getSongInCategory(
+        @Header("Authorization") accessToken: String,
+        @Path("categoryId") id: String
+    ): Call<ApiResponse<ListSongResponse>>
 
 }
