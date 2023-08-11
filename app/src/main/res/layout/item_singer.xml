@@ -20,6 +20,7 @@
 
     <TextView
         android:id="@+id/tv_singer"
+        style="@style/TEXT"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
@@ -27,7 +28,6 @@
         android:maxLines="2"
         android:padding="8dp"
         android:scrollHorizontally="false"
-        android:textColor="@color/black"
         android:textSize="16sp"
         android:textStyle="bold"
         />

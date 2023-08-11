@@ -76,4 +76,8 @@
         <item name="android:src">@drawable/arrow_back</item>
     </style>
 
+    <style name="FAVOURITE">
+        <item name="android:src">@drawable/heart_outline</item>
+    </style>
+
 </resources>
