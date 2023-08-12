@@ -8,6 +8,7 @@ import com.example.hitmusicapp.entities.Category
 import com.example.hitmusicapp.entities.Singer
 import com.example.hitmusicapp.entities.Song
 import com.example.hitmusicapp.entity.ResultsHomeResponse
+import com.example.hitmusicapp.entity.SearchResult
 import com.example.hitmusicapp.retrofit.ApiHelper
 import com.example.hitmusicapp.retrofit.ApiResponse
 import retrofit2.Call
@@ -24,6 +25,12 @@ class HomeViewModel : BaseViewModel() {
 
     var singerPosition = 0
     var categoryPosition = 0
+//    var songPosition = 0
+
+    var keyword = ""
+
+
+    var songPosition = MutableLiveData<Int>()
 
     private val _song = MutableLiveData<Song>()
     val song: LiveData<Song>
@@ -32,6 +39,10 @@ class HomeViewModel : BaseViewModel() {
     val loading by lazy {
         MutableLiveData<Boolean>()
     }
+
+    var _data = MutableLiveData<SearchResult>()
+    val data: LiveData<SearchResult>
+        get() = _data
 
     private val _listCategory = MutableLiveData<MutableList<Category>>()
     val listCategory: LiveData<MutableList<Category>>
@@ -165,70 +176,36 @@ class HomeViewModel : BaseViewModel() {
         getAllCategory()
     }
 
+    suspend fun searchByKeyword(): DataResult<SearchResult> {
+        return suspendCoroutine {
+            ApiHelper.getInstance().search(accessToken, keyword).enqueue(
+                object : Callback<ApiResponse<SearchResult>> {
+                    override fun onResponse(
+                        call: Call<ApiResponse<SearchResult>>,
+                        response: Response<ApiResponse<SearchResult>>
+                    ) {
+                        if (response.isSuccessful && response.body() != null) {
+                            it.resume(DataResult.Success(response.body()!!.data))
+                        }
+//                        it.resume(DataResult.Success(response.body()!!.data))
+                    }
 
-//    suspend fun getListSongBySinger() : DataResult<MutableList<Song>>{
-//        var list = mutableListOf<Song>()
-//        return suspendCoroutine {
-//            ApiHelper.getInstance().getSongBySinger(accessToken, singerId).enqueue(
-//                object : Callback<ApiResponse<ListSongResponse>> {
-//                    override fun onResponse(
-//                        call: Call<ApiResponse<ListSongResponse>>,
-//                        response: Response<ApiResponse<ListSongResponse>>
-//                    ) {
-//                        if (response.isSuccessful && response.body()?.data != null) {
-//                            list = response.body()?.data!!.listMusic
-//                        }
-//                        it.resume(DataResult.Success(list))
-//                    }
-//
-//                    override fun onFailure(
-//                        call: Call<ApiResponse<ListSongResponse>>,
-//                        t: Throwable
-//                    ) {
-//                        it.resume(DataResult.Success(list))
-//                    }
-//                }
-//            )
-//        }
-//    }
-//
-//    suspend fun getListSongByCategory() : DataResult<MutableList<Song>> {
-//        var list = mutableListOf<Song>()
-//        return suspendCoroutine {
-//            ApiHelper.getInstance().getSongBySinger(accessToken, categoryId).enqueue(
-//                object : Callback<ApiResponse<ListSongResponse>> {
-//                    override fun onResponse(
-//                        call: Call<ApiResponse<ListSongResponse>>,
-//                        response: Response<ApiResponse<ListSongResponse>>
-//                    ) {
-//                        if (response.isSuccessful && response.body()?.data != null) {
-//                            list = response.body()?.data!!.listMusic
-//                        }
-//                        it.resume(DataResult.Success(list))
-//                    }
-//
-//                    override fun onFailure(
-//                        call: Call<ApiResponse<ListSongResponse>>,
-//                        t: Throwable
-//                    ) {
-//                        it.resume(DataResult.Success(list))
-//                    }
-//                }
-//            )
-//        }
-//    }
-//    fun getListBySinger() {
-//        executeTask(
-//            request = {getListSongBySinger()},
-//            onSuccess = {}
-//        )
-//    }
-//    fun getSongByCategory() {
-//        executeTask(
-//            request = {getListSongByCategory()},
-//            onSuccess = {}
-//        )
-//    }
+                    override fun onFailure(call: Call<ApiResponse<SearchResult>>, t: Throwable) {
 
+                    }
+
+                }
+            )
+        }
+    }
+
+    fun getSearchResult() {
+        executeTask(
+            request = {searchByKeyword()},
+            onSuccess = {
+                _data.value = it
+            }
+        )
+    }
 
 }

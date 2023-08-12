@@ -15,6 +15,7 @@ import retrofit2.http.Header
 import retrofit2.http.POST
 import retrofit2.http.PUT
 import retrofit2.http.Path
+import retrofit2.http.Query
 
 interface ApiService {
     @POST("/api/auth/login")
@@ -44,7 +45,8 @@ interface ApiService {
     @GET(ApiConstants.GET_LIST_MUSIC)
     fun getListMusic(
         @Header("Authorization") token: String,
-    ): Call<ApiResponse<ResultsHomeResponse<Song>>>
+
+        ): Call<ApiResponse<ResultsHomeResponse<Song>>>
 
     @GET(ApiConstants.GET_LIST_CATEGORY)
     fun getListCategory(@Header("Authorization") accessToken: String): Call<ApiResponse<ResultsHomeResponse<Category>>>
@@ -75,5 +77,11 @@ interface ApiService {
         @Header("Authorization") accessToken: String,
         @Path("categoryId") id: String
     ): Call<ApiResponse<ListSongResponse>>
+
+    @GET(ApiConstants.SEARCH)
+    fun search(
+        @Header("Authorization") accessToken: String,
+        @Query("keyword") keyword: String
+    ) : Call<ApiResponse<SearchResult>>
 
 }

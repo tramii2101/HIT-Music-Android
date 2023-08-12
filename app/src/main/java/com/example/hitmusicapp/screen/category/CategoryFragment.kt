@@ -9,6 +9,7 @@ import android.view.ViewGroup
 import androidx.activity.addCallback
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.RecyclerView
+import com.example.hitmusicapp.MainActivity
 import com.example.hitmusicapp.adapters.SongInListAdapter
 import com.example.hitmusicapp.base.BaseFragment
 import com.example.hitmusicapp.databinding.FragmentCategoryBinding
@@ -30,6 +31,7 @@ class CategoryFragment : BaseFragment<FragmentCategoryBinding>() {
     val sharedPref by lazy {
         requireActivity().getSharedPreferences("my_preferences", Context.MODE_PRIVATE)
     }
+
     val songAdapter by lazy {
         SongInListAdapter()
     }
@@ -54,24 +56,29 @@ class CategoryFragment : BaseFragment<FragmentCategoryBinding>() {
 
     override fun initListener() {
         songAdapter.setOnClickItem { item, position ->
+            sharedPref.edit().putString("fragmentSendData", "CategoryFragment").apply()
             val intent = Intent(requireActivity(), PlayActivity::class.java)
             val songId = item?.id
-            val singerId = viewModel?.singerId
+            val categoryId = viewModel?.categoryId
             val bundle = Bundle()
             bundle.putString("Song_of_category_id", songId)
             bundle.putInt("Song_of_category_category", position)
-            bundle.putString("Category_id", singerId)
+            bundle.putString("Category_id", categoryId)
             intent.putExtras(bundle)
             startActivity(intent)
         }
 
         binding.imgBack.setOnClickListener {
             requireActivity().supportFragmentManager.popBackStack(
-                "forgot_password",
+                "Home",
                 FragmentManager.POP_BACK_STACK_INCLUSIVE)
+            (activity as MainActivity).visible()
         }
 
         requireActivity().onBackPressedDispatcher.addCallback(this) {
+            requireActivity().supportFragmentManager.popBackStack(
+                "Home",
+                FragmentManager.POP_BACK_STACK_INCLUSIVE)
 
         }
     }

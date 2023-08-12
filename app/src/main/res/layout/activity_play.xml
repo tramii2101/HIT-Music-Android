@@ -79,6 +79,7 @@
 
     <ImageView
         android:id="@+id/tv_back"
+        style="@style/ImageView"
         android:layout_width="40dp"
         android:layout_height="40dp"
         android:src="@drawable/arrow_back"
@@ -100,9 +101,9 @@
             android:id="@+id/img_song"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:scaleType="centerCrop"
             app:layout_constraintTop_toTopOf="@+id/horizontal_11"
-            tools:layout_editor_absoluteX="0dp"
-            android:scaleType="centerCrop"/>
+            tools:layout_editor_absoluteX="0dp" />
 
     </androidx.cardview.widget.CardView>
 
@@ -119,9 +120,9 @@
 
         <TextView
             android:id="@+id/tv_song"
+            style="@style/TEXT"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textColor="@color/black"
             android:textSize="20sp"
             android:textStyle="bold" />
 
@@ -129,8 +130,7 @@
             android:id="@+id/tv_singer"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textSize="16sp"
-            />
+            android:textSize="16sp" />
 
     </LinearLayout>
 
@@ -150,8 +150,8 @@
             android:layout_height="0dp"
             android:layout_weight="2"
             android:progress="10"
-            android:thumbTint="@color/green_b"
-            android:progressTint="@color/green_b"/>
+            android:progressTint="@color/green_b"
+            android:thumbTint="@color/green_b" />
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -164,7 +164,7 @@
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:gravity="center|left"
-                android:text="00:00"
+                android:text="0:00"
                 android:textSize="16sp" />
 
             <TextView
@@ -173,7 +173,7 @@
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:gravity="center|right"
-                android:text="3:00"
+                android:text="0:00"
                 android:textSize="16sp" />
         </LinearLayout>
 
@@ -184,8 +184,8 @@
         android:layout_height="0dp"
         android:orientation="horizontal"
         app:layout_constraintBottom_toBottomOf="@id/horizontal_5"
-        app:layout_constraintEnd_toStartOf="@+id/vertical_3"
-        app:layout_constraintStart_toStartOf="@+id/vertical_2"
+        app:layout_constraintEnd_toStartOf="@+id/vertical_4"
+        app:layout_constraintStart_toStartOf="@+id/vertical_1"
         app:layout_constraintTop_toBottomOf="@+id/linearLayout3">
 
         <LinearLayout
@@ -197,6 +197,7 @@
 
             <ImageView
                 android:id="@+id/skip_previous"
+                style="@style/ImageView"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:src="@drawable/skip_previous" />
@@ -212,6 +213,7 @@
 
             <ImageView
                 android:id="@+id/replay_10"
+                style="@style/ImageView"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:src="@drawable/replay_10" />
@@ -243,6 +245,7 @@
 
             <ImageView
                 android:id="@+id/forward_10"
+                style="@style/ImageView"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:src="@drawable/forward_10" />
@@ -257,6 +260,7 @@
 
             <ImageView
                 android:id="@+id/skip_next"
+                style="@style/ImageView"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:src="@drawable/skip_next" />
