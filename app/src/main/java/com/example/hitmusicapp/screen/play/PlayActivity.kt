@@ -4,7 +4,6 @@ import android.content.Context
 import android.media.AudioAttributes
 import android.media.MediaPlayer
 import android.os.Handler
-import android.util.Log
 import android.view.LayoutInflater
 import android.widget.SeekBar
 import androidx.lifecycle.ViewModelProvider
@@ -13,121 +12,146 @@ import com.example.hitmusicapp.base.BaseActivity
 import com.example.hitmusicapp.databinding.ActivityPlayBinding
 import com.example.hitmusicapp.entities.Song
 import com.example.hitmusicapp.entity.SongResponse
+import com.example.hitmusicapp.entity.SongResultSearch
 import com.example.hitmusicapp.viewmodel.HomeViewModel
 import com.example.hitmusicapp.viewmodel.SongViewModel
 import java.util.concurrent.TimeUnit
 
 class PlayActivity : BaseActivity<ActivityPlayBinding>() {
+    val songViewModel by lazy {
+        ViewModelProvider(this)[SongViewModel::class.java]
+    }
 
     val homeViewModel by lazy {
         ViewModelProvider(this)[HomeViewModel::class.java]
     }
 
-    val songViewModel by lazy {
-        ViewModelProvider(this)[SongViewModel::class.java]
-    }
+//    private val mediaPlayer by lazy {
+//        MediaPlayer()
+//    }
 
     private var mediaPlayer: MediaPlayer? = null
-
 
     val sharedPref by lazy {
         getSharedPreferences("my_preferences", Context.MODE_PRIVATE)
     }
 
-    var listMusic = mutableListOf<Song>()
-
+    //    private lateinit var runnable: Runnable
     private var handler: Handler = Handler()
+
+    private var thisSong : Song? = null
+
+    private var songResult : SongResultSearch? = null
 
     override fun initData() {
         val bundle = intent.extras
-
         val token = sharedPref.getString("accessToken", "")
+        val fragment = sharedPref.getString("fragmentSendData","")
+        val post = bundle?.getInt("Song_position")
 
-        when (val fragment = sharedPref.getString("fragmentSendData", "")) {
+//        val receivedData = bundle?.getString("Song_id")
+//        if (receivedData != null) {
+//            songViewModel.songID = receivedData
+//        }
+        songViewModel.accessToken = "Bearer $token"
+
+        when (fragment) {
             "HomeFragment" -> {
-                if (token != null) {
-                    homeViewModel.accessToken = "Bearer $token"
-                }
-                homeViewModel.songPosition.value = bundle?.getInt("Song_position")
-
+                homeViewModel.accessToken = "Bearer $token"
                 homeViewModel.getSongAtHome()
+                homeViewModel.songPosition.value = post
                 homeViewModel.listSong.observe(this) {
-                    listMusic = it
-                    homeViewModel.songPosition.observe(this) {
-                        songViewModel.songId.value = listMusic[homeViewModel.songPosition.value!!].id.toString()
-                    }
-                }
-            }
-
-            else -> {
-                if (token != null) {
-                    songViewModel.accessToken = "Bearer $token"
-                }
-                when (fragment) {
-                    "SingerDetail" -> {
-                        songViewModel.singerId = bundle?.getString("Singer_id").toString()
-                        songViewModel.songPosition.value = bundle?.getInt("Song_of_singer_position")
-                        songViewModel.getSongBySinger()
-                        songViewModel.listSongByCategory.observe(this) {
-                            listMusic = it
-                        }
-                    }
-                    "Category" -> {
-                        songViewModel.categoryId = bundle?.getString("Category_id").toString()
-                        songViewModel.songPosition.value = bundle?.getInt("Song_of_category_category")
-                        songViewModel.getSongByCategory()
-                        songViewModel.listSong.observe(this) {
-                            listMusic = it
-                        }
-                    }
-                }
-                songViewModel.songPosition.observe(this) {
-                    songViewModel.songId.value = listMusic[songViewModel.songPosition.value!!].id.toString()
-                }
-            }
-        }
-
-        songViewModel.songId.observe(this) {
-            songViewModel.getSong()
-        }
-
-        songViewModel.song.observe(this) {
-            if (it != null) {
-                bindSingerData(it)
-                mediaPlayer?.apply {
-                    setAudioAttributes(
-                        AudioAttributes.Builder()
-                            .setContentType(AudioAttributes.CONTENT_TYPE_MUSIC)
-                            .setUsage(AudioAttributes.USAGE_MEDIA)
-                            .build()
-                    )
-                    setDataSource(it.audio)
-                    prepare()
-                }?.setOnPreparedListener { media ->
-                    binding.seekBar.max = media.duration
-                    handler.post(object : Runnable {
-                        override fun run() {
-                            val curDuration = mediaPlayer?.currentPosition?.toLong()
-                            if (curDuration != null) {
-                                val time = String.format(
-                                    "%02d:%02d ",
-                                    TimeUnit.MILLISECONDS.toMinutes(curDuration),
-                                    TimeUnit.MILLISECONDS.toSeconds(curDuration) - TimeUnit.MINUTES.toSeconds(
-                                        TimeUnit.MILLISECONDS.toMinutes(
-                                            curDuration
-                                        )
-                                    )
+                    if (homeViewModel.listSong.value?.size != 0) {
+                        homeViewModel.songPosition.observe(this) {
+                            thisSong = homeViewModel.songPosition.value?.let { it1 ->
+                                homeViewModel.listSong.value?.get(
+                                    it1
                                 )
-                                binding.totalTime.text = timerConversion(mediaPlayer!!.duration)
-                                binding.currentTime.text = time
-                                binding.seekBar.progress = curDuration.toInt()
                             }
-
-                            handler.postDelayed(this, 1000)
+                            songViewModel.songID = thisSong?.id.toString()
+                            songViewModel.getSong()
+                            songViewModel.song.observe(this) {
+                                if (it != null) {
+                                    bindSingerData(it)
+                                    it.audio?.let { it1 -> fillData(it1) }
+                                    mediaPlayer!!.start()
+                                }
+                            }
                         }
-                    })
+                    }
                 }
-                mediaPlayer?.start()
+            }
+            "SingerDetailFragment" -> {
+                val singerId = bundle?.getString("Singer_id")
+                songViewModel.singerId = singerId.toString()
+                songViewModel.getSongBySinger()
+                songViewModel.songPosition.value = post
+
+                songViewModel.listSong.observe(this) {
+                    if (songViewModel.listSong.value?.size != 0) {
+                        thisSong = songViewModel.songPosition.value?.let { it1 ->
+                            songViewModel.listSong.value?.get(
+                                it1
+                            )
+                        }
+                    }
+                }
+                songViewModel.songID = thisSong?.id.toString()
+                songViewModel.getSong()
+                songViewModel.song.observe(this) {
+                    if (it != null) {
+                        bindSingerData(it)
+                        it.audio?.let { it1 -> fillData(it1) }
+                        mediaPlayer!!.start()
+                    }
+                }
+            }
+            "CategoryFragment" -> {
+                val categoryId = bundle?.getString("Category_id")
+                songViewModel.categoryId = categoryId.toString()
+                songViewModel.getSongByCategory()
+                songViewModel.songPosition.value = post
+
+                songViewModel.listSongByCategory.observe(this) {
+                    if (songViewModel.listSongByCategory.value?.size != 0) {
+                        thisSong = songViewModel.songPosition.value?.let { it1 ->
+                            songViewModel.listSongByCategory.value?.get(
+                                it1
+                            )
+                        }
+                    }
+                }
+                songViewModel.songID = thisSong?.id.toString()
+                songViewModel.getSong()
+                songViewModel.song.observe(this) {
+                    if (it != null) {
+                        bindSingerData(it)
+                        it.audio?.let { it1 -> fillData(it1) }
+                        mediaPlayer!!.start()
+                    }
+                }
+            }
+            "ExploreFragment" -> {
+                val keyword = bundle?.getString("keyword")
+                homeViewModel.songPosition.value = post
+                homeViewModel.keyword = keyword.toString()
+                homeViewModel.getSearchResult()
+                homeViewModel.data.observe(this) {
+                    if (homeViewModel.data.value?.listSong?.size != 0) {
+                        homeViewModel.songPosition.observe(this) {
+                            songResult = homeViewModel.songPosition.value?.let { it1 ->
+                                homeViewModel.data.value?.listSong?.get(
+                                    it1
+                                )
+                            }
+                            binding.tvSong.text = songResult?.title
+                            binding.tvSinger.text = songResult?.singer?.fullname
+                            Glide.with(binding.imgSong.context).load(songResult?.image).into(binding.imgSong)
+                            songResult?.audio?.let { it1 -> fillData(it1) }
+                            mediaPlayer!!.start()
+                        }
+                    }
+                }
             }
         }
     }
@@ -155,7 +179,7 @@ class PlayActivity : BaseActivity<ActivityPlayBinding>() {
                 }
 
                 override fun onStopTrackingTouch(seekBar: SeekBar?) {
-                    if (mediaPlayer?.isPlaying == true) {
+                    if (mediaPlayer != null && mediaPlayer!!.isPlaying) {
                         mediaPlayer!!.seekTo(binding.seekBar.progress)
                     }
                 }
@@ -167,6 +191,7 @@ class PlayActivity : BaseActivity<ActivityPlayBinding>() {
             mediaPlayer!!.seekTo(0)
         }
 
+
         binding.play.setOnCheckedChangeListener { buttonView, isChecked ->
             if (!isChecked)
                 mediaPlayer?.pause()
@@ -174,24 +199,59 @@ class PlayActivity : BaseActivity<ActivityPlayBinding>() {
         }
 
         binding.replay10.setOnClickListener {
-            binding.seekBar.progress = (mediaPlayer?.currentPosition)?.minus(10000)!!
-            mediaPlayer?.seekTo(binding.seekBar.progress)
+            binding.seekBar.progress = (mediaPlayer?.currentPosition )?.minus(10000)!!
+            mediaPlayer!!.seekTo(binding.seekBar.progress)
         }
 
         binding.forward10.setOnClickListener {
-            binding.seekBar.progress = (mediaPlayer?.currentPosition)?.plus(10000)!!
-            mediaPlayer?.seekTo(binding.seekBar.progress)
+            binding.seekBar.progress = (mediaPlayer?.currentPosition )?.plus(10000)!!
+            mediaPlayer!!.seekTo(binding.seekBar.progress)
+        }
+
+        val fragment = sharedPref.getString("fragmentSendData","")
+        var size = 0
+
+        when (fragment) {
+            "HomeFragment" -> {
+                size = homeViewModel.listSong.value?.size!!
+            }
+
+            "ExploreFragment" -> {
+                size = homeViewModel.listSong.value?.size!!
+            }
+            "SingerDetailFragment" -> {
+                size = songViewModel.listSong.value?.size!!
+            }
+            "CategoryFragment" -> {
+                size = songViewModel.listSongByCategory.value?.size!!
+            }
         }
 
         binding.skipNext.setOnClickListener {
-            Log.e("TAG", "initListener: baudcjuan", )
-//            clearMediaPlayer()
-            when (sharedPref.getString("fragmentSendData", "")) {
-                "HomeFragment" -> {
-                    homeViewModel.songPosition.value = homeViewModel.songPosition.value?.plus(1)
+            clearMediaPlayer()
+            when (fragment) {
+                "HomeFragment", "ExploreFragment" -> {
+                    if (homeViewModel.songPosition.value!! < size)
+                        homeViewModel.songPosition.value = homeViewModel.songPosition.value?.plus(1)
                 }
-                else -> {
-                    songViewModel.songPosition.value = songViewModel.songPosition.value?.plus(1)
+                "SingerDetailFragment", "CategoryFragment" -> {
+                    if (songViewModel.songPosition.value!! < size)
+                        songViewModel.songPosition.value = homeViewModel.songPosition.value?.plus(1)
+                }
+            }
+
+        }
+
+        binding.skipPrevious.setOnClickListener {
+            clearMediaPlayer()
+            when (fragment) {
+                "HomeFragment", "ExploreFragment" -> {
+                    if (homeViewModel.songPosition.value!! < size)
+                        homeViewModel.songPosition.value = homeViewModel.songPosition.value?.minus(1)
+                }
+                "SingerDetailFragment", "CategoryFragment" -> {
+                    if (songViewModel.songPosition.value!! < size)
+                        songViewModel.songPosition.value = homeViewModel.songPosition.value?.minus(1)
                 }
             }
         }
@@ -232,26 +292,48 @@ class PlayActivity : BaseActivity<ActivityPlayBinding>() {
 
     private fun clearMediaPlayer() {
         mediaPlayer?.stop()
-        mediaPlayer?.reset()
+        mediaPlayer?.release()
         mediaPlayer = null
-//        mediaPlayer.release()
-
-
-
     }
     override fun onDestroy() {
-        clearMediaPlayer()
         super.onDestroy()
-    }
-
-    override fun onBackPressed() {
         clearMediaPlayer()
-        super.onBackPressed()
     }
 
-    fun playMusicAtCurrentTime() {
-
+    fun fillData(link: String) {
+        mediaPlayer = MediaPlayer()
+        mediaPlayer?.apply {
+            setAudioAttributes(
+                AudioAttributes.Builder()
+                    .setContentType(AudioAttributes.CONTENT_TYPE_MUSIC)
+                    .setUsage(AudioAttributes.USAGE_MEDIA)
+                    .build()
+            )
+            setDataSource(link)
+            prepare()
+        }?.setOnPreparedListener { media ->
+            binding.seekBar.max = media.duration
+            handler.post(object : Runnable {
+                override fun run() {
+                    val curDuration = mediaPlayer?.currentPosition?.toLong()
+                    if (curDuration != null) {
+                        val time = String.format(
+                            "%02d:%02d ",
+                            TimeUnit.MILLISECONDS.toMinutes(curDuration),
+                            TimeUnit.MILLISECONDS.toSeconds(curDuration) - TimeUnit.MINUTES.toSeconds(
+                                TimeUnit.MILLISECONDS.toMinutes(
+                                    curDuration
+                                )
+                            )
+                        )
+                        binding.totalTime.text = timerConversion(mediaPlayer!!.duration)
+                        binding.currentTime.text = time
+                        binding.seekBar.progress = curDuration.toInt()
+                    }
+                    handler.postDelayed(this, 1000)
+                }
+            })
+        }
     }
-
 
 }

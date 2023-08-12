@@ -41,10 +41,12 @@ class SongViewModel : BaseViewModel() {
     var categoryId = ""
     var songId = MutableLiveData<String>()
 
+    var songID = ""
+
     suspend fun getSongById(): DataResult<SongResponse> {
         var song = SongResponse()
         return suspendCoroutine {
-            ApiHelper.getInstance().getSongById(accessToken, songId.value.toString()).enqueue(
+            ApiHelper.getInstance().getSongById(accessToken, songID).enqueue(
                 object : Callback<ApiResponse<SongResponse>> {
                     override fun onResponse(
                         call: Call<ApiResponse<SongResponse>>,
@@ -113,7 +115,7 @@ class SongViewModel : BaseViewModel() {
     suspend fun addSongToFavourite(): DataResult<String> {
         var message = ""
         return suspendCoroutine {
-            ApiHelper.getInstance().addToFavourite(accessToken, mapOf("musicId" to songId.value.toString())).enqueue(
+            ApiHelper.getInstance().addToFavourite(accessToken, mapOf("musicId" to songID)).enqueue(
                 object : Callback<ApiResponse<String>> {
                     override fun onResponse(
                         call: Call<ApiResponse<String>>,

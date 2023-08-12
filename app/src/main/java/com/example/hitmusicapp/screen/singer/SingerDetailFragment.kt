@@ -62,7 +62,7 @@ class SingerDetailFragment : BaseFragment<FragmentSingerDetailBinding>() {
             val singerId = viewModel?.singerId
             val bundle = Bundle()
             bundle.putString("Song_of_singer_id", songId)
-            bundle.putInt("Song_of_singer_position", position)
+            bundle.putInt("Song_position", position)
             bundle.putString("Singer_id", singerId)
             intent.putExtras(bundle)
             startActivity(intent)

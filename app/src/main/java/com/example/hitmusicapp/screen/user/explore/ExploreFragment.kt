@@ -129,6 +129,7 @@ class ExploreFragment : BaseFragment<FragmentExploreBinding>() {
             val songId = item?.id
             viewModel?.songPosition?.value = position
             val bundle = Bundle()
+            bundle.putString("keyword", keyword)
             bundle.putString("Song_id", songId)
             bundle.putString("keyword", keyword)
             bundle.putInt("Song_position", position)

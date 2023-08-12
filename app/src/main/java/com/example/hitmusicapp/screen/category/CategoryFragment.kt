@@ -61,8 +61,8 @@ class CategoryFragment : BaseFragment<FragmentCategoryBinding>() {
             val songId = item?.id
             val categoryId = viewModel?.categoryId
             val bundle = Bundle()
-            bundle.putString("Song_of_category_id", songId)
-            bundle.putInt("Song_of_category_category", position)
+            bundle.putString("Song_id", songId)
+            bundle.putInt("Song_position", position)
             bundle.putString("Category_id", categoryId)
             intent.putExtras(bundle)
             startActivity(intent)
