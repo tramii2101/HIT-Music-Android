@@ -13,6 +13,7 @@
         android:layout_height="?attr/actionBarSize">
 
         <ImageView
+            style="@style/ImageView"
             android:id="@+id/tv_back"
             android:layout_width="40sp"
             android:layout_height="40sp"
@@ -24,8 +25,8 @@
             android:layout_height="match_parent"
             android:gravity="center_vertical"
             android:paddingHorizontal="6dp"
+            style="@style/TEXT"
             android:text="Create new password"
-            android:textColor="@color/black"
             android:textSize="20sp"
             android:textStyle="bold" />
     </LinearLayout>
@@ -43,22 +44,23 @@
             android:gravity="center"
             android:layout_marginVertical="90dp">
             <TextView
+                style="@style/TEXT"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/send_code"
-                android:textColor="@color/black"
                 android:textSize="18sp" />
 
             <TextView
                 android:id="@+id/tv_email"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textColor="@color/black"
+                style="@style/TEXT"
                 android:textSize="18sp"
                 android:text=""/>
         </LinearLayout>
 
         <com.mukeshsolanki.OtpView
+            style="@style/TEXT"
             android:id="@+id/otp_view"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -68,11 +70,8 @@
             android:gravity="center_horizontal"
             android:inputType="numberPassword"
             android:itemBackground="@drawable/otp_item"
-            android:textAllCaps="true"
-            android:textColor="@color/black"
             app:OtpHideLineWhenFilled="false"
-            app:OtpItemCount="6"
-            />
+            app:OtpItemCount="6" />
 
         <LinearLayout
             android:layout_width="wrap_content"
@@ -85,7 +84,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Resend code in"
-                android:textColor="@color/black"
+                style="@style/TEXT"
                 android:textSize="16sp" />
 
             <TextView

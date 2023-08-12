@@ -1,6 +1,5 @@
 package com.example.hitmusicapp.adapters
 
-import android.app.AlertDialog
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import com.bumptech.glide.Glide
@@ -23,12 +22,6 @@ class SongInListAdapter : BaseAdapterRecyclerView<Song, ItemSongBinding>() {
 
     override fun onBindViewHolder(holder: BaseViewHolder<ItemSongBinding>, position: Int) {
 
-        super.onBindViewHolder(holder, position)
-        holder.binding.imgFavourite.setOnClickListener {
-            val dialog : AlertDialog
-
-//            Toast.makeText(binding?.imgFavourite?.context, "Added to favourite", Toast.LENGTH_SHORT).show()
-        }
 
 
     }

@@ -1,12 +1,11 @@
-package com.example.hitmusicapp.screen.user.search
+package com.example.hitmusicapp.screen.listSong
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import com.example.hitmusicapp.base.BaseFragment
-import com.example.hitmusicapp.databinding.FragmentSearchResultBinding
+import com.example.hitmusicapp.databinding.FragmentAllSongBinding
 
-
-class SearchResultFragment : BaseFragment<FragmentSearchResultBinding>() {
+class AllSongFragment : BaseFragment<FragmentAllSongBinding>() {
     override fun initListener() {
 
     }
@@ -30,8 +29,8 @@ class SearchResultFragment : BaseFragment<FragmentSearchResultBinding>() {
     override fun inflateLayout(
         inflater: LayoutInflater,
         container: ViewGroup?
-    ): FragmentSearchResultBinding {
-        return FragmentSearchResultBinding.inflate(inflater, container, false)
+    ): FragmentAllSongBinding {
+        return FragmentAllSongBinding.inflate(inflater, container, false)
     }
 
 }

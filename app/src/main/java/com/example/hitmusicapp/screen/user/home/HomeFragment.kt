@@ -6,7 +6,6 @@ import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.ViewGroup
-import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.RecyclerView
 import com.example.hitmusicapp.MainActivity
@@ -17,10 +16,10 @@ import com.example.hitmusicapp.adapters.SongAdapter
 import com.example.hitmusicapp.base.BaseFragment
 import com.example.hitmusicapp.databinding.FragmentHomeBinding
 import com.example.hitmusicapp.screen.category.CategoryFragment
+import com.example.hitmusicapp.screen.listSong.AllSongFragment
 import com.example.hitmusicapp.screen.play.PlayActivity
+import com.example.hitmusicapp.screen.singer.ListSingerFragment
 import com.example.hitmusicapp.screen.singer.SingerDetailFragment
-import com.example.hitmusicapp.screen.user.explore.ExploreFragment
-import com.example.hitmusicapp.screen.user.profile.OnItemClickListener
 import com.example.hitmusicapp.utils.extension.setGridLayoutManager
 import com.example.hitmusicapp.utils.extension.setLinearLayoutManager
 import com.example.hitmusicapp.viewmodel.HomeViewModel
@@ -72,16 +71,8 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>() {
         }
 
     }
+
     override fun initView() {
-//        viewModel?.loading?.observe(this) {
-//            if (it) {
-//                dialog?.start(
-//                    false
-//                )
-//            } else {
-//                dialog?.dismiss()
-//            }
-//        }
 
         binding.recyclerSinger.setLinearLayoutManager(
             requireContext(),
@@ -105,8 +96,10 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>() {
 
     override fun initListener() {
         songAdapter.setOnClickItem { item, position ->
+            sharedPref.edit().putString("fragmentSendData", "HomeFragment").apply()
             val intent = Intent(requireActivity(), PlayActivity::class.java)
             val songId = item?.id
+            viewModel?.songPosition?.value = position
             val songPosition = position
             val bundle = Bundle()
             bundle.putString("Song_id", songId)
@@ -128,6 +121,22 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>() {
             viewModel?.categoryPosition = position
             requireActivity().supportFragmentManager.beginTransaction()
                 .replace(R.id.main, CategoryFragment())
+                .addToBackStack("Home")
+                .commit()
+            (activity as MainActivity).gone()
+        }
+
+        binding.tvAllSinger.setOnClickListener {
+            requireActivity().supportFragmentManager.beginTransaction()
+                .add(R.id.main, ListSingerFragment())
+                .addToBackStack("Home")
+                .commit()
+            (activity as MainActivity).gone()
+        }
+
+        binding.tvAllSongs.setOnClickListener {
+            requireActivity().supportFragmentManager.beginTransaction()
+                .replace(R.id.main, AllSongFragment())
                 .addToBackStack("Home")
                 .commit()
             (activity as MainActivity).gone()

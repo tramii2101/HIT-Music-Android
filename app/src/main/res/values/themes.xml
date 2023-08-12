@@ -80,4 +80,12 @@
         <item name="android:src">@drawable/heart_outline</item>
     </style>
 
+    <style name="FILTER">
+        <item name="android:src">@drawable/filter_search_background</item>
+    </style>
+
+    <style name="BACKGROUNG">
+        <item name="android:src">@drawable/select_method</item>
+    </style>
+
 </resources>

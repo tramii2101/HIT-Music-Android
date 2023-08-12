@@ -43,7 +43,7 @@ class MainActivity : BaseActivity<ActivityMainBinding>(), OnItemClickListener {
 
     }
 
-    private fun visible() {
+    fun visible() {
         if (isGone) {
             binding.btnNav.visibility = View.VISIBLE
             binding.viewPager2.visibility = View.VISIBLE

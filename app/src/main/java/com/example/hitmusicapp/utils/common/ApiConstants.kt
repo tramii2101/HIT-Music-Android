@@ -1,5 +1,7 @@
 package com.example.hitmusicapp.utils.common
 
+import retrofit2.http.GET
+
 object ApiConstants {
     const val BASE = "https://hitmusic.tech"
 
@@ -13,10 +15,10 @@ object ApiConstants {
     const val VERIFY_OTP = "/api/auth/verify-otp"
     const val RESET_PASSWORD = "/api/auth/reset-password"
 
-    const val GET_LIST_MUSIC = "/api/musics"
-    const val SINGER = "/api/singers"
+    const val GET_LIST_MUSIC = "/api/musics?limit=200"
+
     const val GET_LIST_CATEGORY = "/api/categories"
-    const val GET_LIST_SINGER = "/api/singers"
+    const val GET_LIST_SINGER = "/api/singers?limit=200"
 
     const val GET_SONG_BY_SINGER = "/api/musics/singer/{singerId}"
 
@@ -26,5 +28,5 @@ object ApiConstants {
 
     const val GET_SONG_IN_CATEGORY = "/api/musics/category/{categoryId}"
 
-
+    const val SEARCH =  "/api/musics/search"
 }
